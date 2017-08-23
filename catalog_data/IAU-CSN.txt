@@ -2,7 +2,7 @@
 # IAU Division C Working Group on Star Names (WGSN)
 # https://www.iau.org/science/scientific_bodies/working_groups/280/
 # WGSN Chair: Eric Mamajek. Email questions or comments to: IAUWGSN@gmail.com
-# Last updated 2017-02-01
+# Last updated 2017-06-30
 #
 # For use of the contents of the data of this file, we encourage users
 # to refer to the (identical) official IAU version of the data at:
@@ -11,18 +11,18 @@
 # Creative Commons Attribution (i.e. free to use in all perpetuity,
 # world-wide, as long as the source is mentioned).
 #
-# Notes: "ID" column is either Bayer greek letter (using two or
-# three-letter abbreviations recognized by the SESAME and SIMBAD
-# databases; e.g. "alf" = alpha) or Flamsteed numbers, as IDed
-# following the The Bright Star Catalogue, 5th Revised Ed. (Hoffleit &
-# Warren 1991). Names marked approved "2015-12-15" are exoplanet host
-# star names - a mix of common names and names adopted via the
-# NameExoWorlds contest - reviewed and adopted by the Executive
-# Committee WG Public Naming of Planets and Planetary Satellites, and
-# formally recognized by WGSN.  The "#" after the constellation column
-# is the component # to the Bayer/Flamsteed designation, if needed
-# (e.g. Proxima Centauri = alf Cen "C"), but may be left blank where
-# the primary by visual brightness is unambiguous (blank = A).
+# Notes: "ID" column is either Bayer greek letter (using abbreviations
+# recognized by the SESAME and SIMBAD databases; e.g. "alf" = alpha)
+# or Flamsteed numbers, as IDed following the The Bright Star
+# Catalogue, 5th Revised Ed. (Hoffleit & Warren 1991). Names marked
+# approved "2015-12-15" are exoplanet host star names - a mix of
+# common names and names adopted via the NameExoWorlds contest -
+# reviewed and adopted by the Executive Committee WG Public Naming of
+# Planets and Planetary Satellites, and formally recognized by WGSN.
+# The character after the constellation column is the component ID to
+# the Bayer/Flamsteed designation, if needed (e.g. Proxima Centauri =
+# alf Cen "C"), but may be left blank where the primary by visual
+# brightness is unambiguous (blank = A).
 #
 # Name            Designation     RA(J2000) Dec(J2000)   Vmag ID    Con #     HIP#    HD# Approved  
 Acamar            HR 897          44.565311 -40.304672   2.88 tet   Eri      13847  18622 2016-07-20 
@@ -49,6 +49,7 @@ Algol             HR 936          47.042215  40.955648   2.09 bet   Per      145
 Algorab           HR 4757        187.466063 -16.515431   2.94 del   Crv      60965 108767 2016-07-20 
 Alhena            HR 2421         99.427960  16.399280   1.93 gam   Gem      31681  47105 2016-07-20 
 Alioth            HR 4905        193.507290  55.959823   1.76 eps   UMa      62956 112185 2016-06-30 
+Aljanah           HR 7949        311.552843  33.970257   2.48 eps   Cyg     102488 197989 2017-06-30
 Alkaid            HR 5191        206.885157  49.313267   1.85 eta   UMa      67301 120315 2016-06-30 
 Alkalurops        HR 5733        231.122618  37.377169   4.31 mu01  Boo      75411 137391 2016-08-21 
 Alkes             HR 4287        164.943604 -18.298783   4.08 alf   Crt      53740  95272 2016-09-12
@@ -64,7 +65,10 @@ Alphecca          HR 5793        233.671950  26.714693   2.22 alf   CrB      762
 Alpheratz         HR 15            2.096916  29.090431   2.07 alf   And        677    358 2016-06-30
 Alrakis           HR 6370        256.333807  54.470078   5.55 mu    Dra A    83608 154906 2017-02-01
 Alrescha          HR 596          30.511772   2.763735   3.82 alf   Psc       9487  12446 2016-08-21 
+Alsafi            HR 7462        293.089960  69.661176   4.67 sig   Dra      96100 185144 2017-06-30
+Alsciaukat        HR 3275        125.708792  43.188131   4.25 31    Lyn      41075  70272 2017-06-30
 Alshain           HR 7602        298.828304   6.406763   3.71 bet   Aql      98036 188512 2016-08-21 
+Alshat            HR 7773        305.165898 -12.759079   4.77 nu    Cap     100310 193432 2017-06-30 
 Altair            HR 7557        297.695827   8.868321   0.76 alf   Aql      97649 187642 2016-06-30 
 Altais            HR 7310        288.138750  67.661541   3.07 del   Dra      94376 180711 2016-08-21 
 Alterf            HR 3773        142.930115  22.967970   4.32 lam   Leo      46750  82308 2017-02-01
@@ -72,8 +76,11 @@ Aludra            HR 2827        111.023760 -29.303106   2.45 eta   CMa      359
 Alula Australis   HR 4375        169.545423  31.529161   4.41 xi    UMa      55203  98231 2016-07-20 
 Alula Borealis    HR 4377        169.619737  33.094305   3.49 nu    UMa      55219  98262 2016-07-20 
 Alya              HR 7141        284.054949   4.203602   4.62 tet01 Ser      92946 175638 2016-08-21 
+Alzirr            HR 2484        101.322351  12.895592   3.35 xi    Gem      32362  48737 2017-06-30
 Ancha             HR 8499        334.208485  -7.783291   4.17 tet   Aqr     110003 211391 2016-09-12
+Angetenar         HR 850          42.759674 -21.004018   4.76 tau02 Eri      13288  17824 2017-06-30
 Ankaa             HR 99            6.570939 -42.306084   2.40 alf   Phe       2081   2261 2016-07-20 
+Anser             HR 7405        292.176375  24.664903   4.44 alf   Vul      95771 183439 2017-06-30
 Antares           HR 6134        247.351915 -26.432003   1.06 alf   Sco      80763 148478 2016-06-30 
 Arcturus          HR 5340        213.915300  19.182409  -0.05 alf   Boo      69673 124897 2016-06-30 
 Arkab Posterior	  HR 7343	 290.804740 -44.799779 	 4.27 bet02 Sgr      95294 181623 2016-10-05 
@@ -92,9 +99,11 @@ Azelfafage        HR 8301        325.523602  51.189623   4.69 pi01  Cyg     1071
 Azha              HR 874          44.106873  -8.898145   3.89 eta   Eri      13701  18322 2016-09-12
 Barnard's Star    GJ 699         269.454023   4.668288   9.54 V2500 Oph      87937      - 2017-02-01
 Baten Kaitos      HR 539          27.865137 -10.335044   3.74 zet   Cet       8645  11353 2016-09-12
+Beemim            HR 1393         66.009239 -34.016848   3.97 ups03 Eri      20535  28028 2017-06-30 
 Beid              HR 1298         62.966415  -6.837580   4.04 omi01 Eri      19587  26574 2016-09-12
 Bellatrix         HR 1790         81.282764   6.349703   1.64 gam   Ori      25336  35468 2016-06-30 
 Betelgeuse        HR 2061         88.792939   7.407064   0.45 alf   Ori      27989  39801 2016-06-30 
+Bharani           HR 838          42.495972  27.260507   3.61 41    Ari Aa   13209  17573 2017-06-30
 Biham             HR 8450        332.549939   6.197863   3.52 tet   Peg     109427 210418 2016-08-21 
 Botein            HR 951          47.907356  19.726674   4.35 del   Ari      14838  19787 2016-09-12
 Canopus           HR 2326         95.987958 -52.695661  -0.62 alf   Car      30438  45348 2016-06-30 
@@ -126,20 +135,28 @@ Eltanin           HR 6705        269.151541  51.488896   2.24 gam   Dra      878
 Enif              HR 8308        326.046484   9.875009   2.38 eps   Peg     107315 206778 2016-07-20 
 Errai             HR 8974        354.836655  77.632313   3.21 gam   Cep     116727 222404 2015-12-15 
 Fafnir            HR 6945        276.496406  65.563480   4.82 42    Dra      90344 170693 2015-12-15 
+Fang              HR 5944        239.712972 -26.114108   2.89 pi    Sco Aa   78265 143018 2017-06-30
 Fomalhaut         HR 8728        344.412693 -29.622237   1.17 alf   PsA     113368 216956 2015-12-15 
+Fulu              HR 153           9.242851  53.896908   3.69 zet   Cas       2920   3360 2017-06-30
 Furud             HR 2282         95.078300 -30.063367   3.02 zet   CMa      30122  44402 2016-07-20 
+Fuyue             HR 6630        267.464503 -37.043305   3.19 -     Sco      87261 161892 2017-06-30
 Gacrux            HR 4763        187.791498 -57.113213   1.59 gam   Cru      61084 108903 2016-07-20
 Giausar           HR 4434        172.850920  69.331075   3.82 lam   Dra      56211 100029 2017-02-01
 Gienah            HR 4662        183.951543 -17.541929   2.58 gam   Crv      59803 106625 2016-11-06
 Gomeisa           HR 2845        111.787674   8.289316   2.89 bet   CMi      36188  58715 2016-07-20 
 Grumium           HR 6688        268.382207  56.872646   3.73 xi    Dra      87585 163588 2016-09-12
 Hadar             HR 5267        210.955856 -60.373035   0.61 bet   Cen      68702 122451 2016-08-21 
+Haedus            HR 1641         76.628722  41.234476   3.18 eta   Aur      23767  32630 2017-06-30 
 Hamal             HR 617          31.793357  23.462418   2.01 alf   Ari       9884  12929 2016-07-20 
+Hassaleh          HR 1577         74.248421  33.166100   2.69 iot   Aur      23015  31398 2017-06-30
 Helvetios         HR 8729        344.366583  20.768831   5.49 51    Peg     113357 217014 2015-12-15 
 Homam             HR 8634        340.365503  10.831363   3.41 zet   Peg     112029 214923 2016-08-21 
 Intercrus         HR 3743        142.166618  45.601482   5.41 -     UMa      46471  81688 2015-12-15 
 Izar              HR 5506        221.246763  27.074207   2.35 eps   Boo      72105 129988 2016-08-21
+Jabbah            HR 6027        242.998894 -19.460708   4.50 nu    Sco Aa   79374 145502 2017-06-30
+Jishui            HR 2930        114.791387  34.584346   4.89 omi   Gem      37265  61110 2017-06-30  
 Kaffaljidhma      HR 804          40.825163   3.235816   3.56 gam   Cet A    12706  16970 2017-02-01
+Kang              HR 5315        213.223939 -10.273704   4.18 kap   Vir      69427 124294 2017-06-30 
 Kaus Australis    HR 6879        276.042993 -34.384616   1.79 eps   Sgr      90185 169022 2016-07-20 
 Kaus Borealis     HR 6913        276.992668 -25.421701   2.82 lam   Sgr      90496 169916 2016-07-20 
 Kaus Media        HR 6859        275.248508 -29.828104   2.72 del   Sgr      89931 168454 2016-07-20 
@@ -152,6 +169,7 @@ Lesath            HR 6508        262.690979 -37.295813   2.70 ups   Sco      856
 Libertas          HR 7595        298.562008   8.461453   4.71 xi    Aql      97938 188310 2015-12-15 
 Lich              PSR B1257+12   195.012701  12.682417      - -     Vir          -      - 2015-12-15 
 Maasym            HR 6526        262.684626  26.110645   4.41 lam   Her      85693 158899 2016-09-12
+Mahasim           HR 2095         89.930292  37.212585   2.65 tet   Aur      28380  40312 2017-06-30
 Maia              HR 1149         56.456695  24.367751   3.87 20    Tau      17573  23408 2016-07-20 
 Marfik            HR 6149        247.728453   1.983888   3.82 lam   Oph      80883 148857 2016-09-12
 Markab            HR 8781        346.190223  15.205267   2.49 alf   Peg     113963 218045 2016-06-30
@@ -171,6 +189,7 @@ Merope            HR 1156         56.581552  23.948348   4.14 23    Tau      176
 Mesarthim         HR 546          28.382560  19.293852   4.75 gam02 Ari       8832  11502 2016-08-21 
 Miaplacidus       HR 3685        138.299906 -69.717208   1.67 bet   Car      45238  80007 2016-07-20 
 Mimosa            HR 4853        191.930263 -59.688764   1.25 bet   Cru      62434 111123 2016-07-20 
+Minelauva         HR 4910        193.900869   3.397470   3.39 del   Vir      63090 112300 2017-06-30
 Mintaka           HR 1852         83.001667  -0.299095   2.25 del   Ori      25930  36486 2016-07-20 
 Mira              HR 681          34.836617  -2.977640   6.47 omi   Cet      10826  14386 2016-06-30 
 Mirach            HR 337          17.433013  35.620557   2.07 bet   And       5447   6860 2016-06-30 
@@ -197,6 +216,7 @@ Pleione           HR 1180         57.296738  24.136710   5.05 28    Tau      178
 Polaris           HR 424          37.954561  89.264109   1.97 alf   UMi      11767   8890 2016-06-30 
 Pollux            HR 2990        116.328958  28.026199   1.16 bet   Gem      37826  62509 2016-06-30 
 Porrima           HR 4825        190.415181  -1.449373   2.74 gam   Vir      61941 110379 2016-07-20 
+Praecipua         HR 4247        163.327937  34.214872   3.79 46    LMi      53229  94264 2017-06-30
 Procyon           HR 2943        114.825493   5.224993   0.40 alf   CMi      37279  61421 2016-06-30 
 Propus            HR 2216         93.719405  22.506794   3.31 eta   Gem      29655  42995 2016-07-20 
 Proxima Centauri  GJ 551         217.428953 -62.679484  11.01 alf   Cen C    70890 999999 2016-08-21 
@@ -206,12 +226,14 @@ Rasalgethi        HR 6406        258.661910  14.390333   3.37 alf01 Her      843
 Rasalhague        HR 6556        263.733627  12.560035   2.08 alf   Oph      86032 159561 2016-07-20 
 Rastaban          HR 6536        262.608174  52.301389   2.79 bet   Dra      85670 159181 2016-08-21 
 Regulus           HR 3982        152.092962  11.967209   1.36 alf   Leo      49669  87901 2016-06-30 
+Revati            HR 361          18.432864   7.575354   5.21 zet   Psc A     5737   7344 2017-06-30 
 Rigel             HR 1713         78.634467  -8.201638   0.18 bet   Ori      24436  34085 2016-06-30 
 Rigil Kentaurus   HR 5459        219.902066 -60.833975  -0.01 alf   Cen A    71683 128620 2016-11-06
 Rotanev           HR 7882        309.387235  14.595115   3.64 bet   Del     101769 196524 2016-09-12
 Ruchbah           HR 403          21.453964  60.235284   2.66 del   Cas       6686   8538 2016-08-21 
 Rukbat            HR 7348        290.971570 -40.615940   3.96 alf   Sgr      95347 181869 2016-07-20 
 Sabik             HR 6378        257.594529 -15.724907   2.43 eta   Oph      84012 155125 2016-08-21 
+Saclateni         HR 1612         75.619531  41.075839   3.69 zet   Aur A    23453  32068 2017-06-30
 Sadachbia         HR 8518        335.414064  -1.387334   3.86 gam   Aqr     110395 212061 2016-08-21 
 Sadalbari         HR 8684        342.500809  24.601577   3.51 mu    Peg     112748 216131 2016-08-21 
 Sadalmelik        HR 8414        331.445983  -0.319849   2.95 alf   Aqr     109074 209750 2016-08-21 
@@ -220,6 +242,7 @@ Sadr              HR 7796        305.557091  40.256679   2.23 gam   Cyg     1004
 Saiph             HR 2004         86.939120  -9.669605   2.07 kap   Ori      27366  38771 2016-07-20 
 Sargas            HR 6553        264.329711 -42.997824   1.86 tet   Sco      86228 159532 2016-08-21 
 Sarin             HR 6410        258.757963  24.839204   3.12 del   Her      84379 156164 2016-09-12
+Sceptrum          HR 1481         69.545104 -14.304017   4.02 53    Eri A    21594  29503 2017-06-30
 Scheat            HR 8775        345.943572  28.082785   2.44 bet   Peg     113881 217906 2016-06-30 
 Schedar           HR 168          10.126838  56.537331   2.24 alf   Cas       3179   3712 2016-08-21 
 Seginus           HR 5435        218.019466  38.308251   3.04 gam   Boo      71075 127762 2016-08-21 
@@ -236,6 +259,8 @@ Subra             HR 3852        145.287640   9.892308   3.52 omi   Leo      475
 Suhail            HR 3634        136.998993 -43.432589   2.23 lam   Vel      44816  78647 2016-08-21 
 Sulafat           HR 7178        284.735928  32.689557   3.25 gam   Lyr      93194 176437 2016-08-21 
 Syrma             HR 5338        214.003623  -6.000545   4.07 iot   Vir      69701 124850 2016-09-12
+Taiyangshou       HR 4518        176.512559  47.779406   3.69 chi   UMa      57399 102224 2017-06-30 
+Taiyi             HR 4916        193.868951  65.438474   5.23 8     Dra      63076 112429 2017-06-30
 Talitha           HR 3569        134.801890  48.041826   3.12 iot   UMa      44127  76644 2016-07-20 
 Tania Australis   HR 4069        155.582250  41.499519   3.06 mu    UMa      50801  89758 2016-07-20 
 Tania Borealis    HR 4033        154.274095  42.914356   3.45 lam   UMa      50372  89021 2016-07-20 
@@ -245,6 +270,8 @@ Tegmine           HR 3208        123.053160  17.647821   4.67 zet01 Cnc      401
 Tejat             HR 2286         95.740112  22.513583   2.87 mu    Gem Aa   30343  44478 2017-02-01
 Theemin           HR 1464         68.887660 -30.562341   3.81 ups02 Eri      21393  29291 2017-02-01
 Thuban            HR 5291        211.097291  64.375851   3.67 alf   Dra      68756 123299 2016-06-30 
+Tianguan          HR 1910         84.411189  21.142544   2.97 zet   Tau      26451  37202 2017-06-30 
+Tianyi            HR 4863        191.893099  66.790305   5.43 7     Dra      62423 111335 2017-06-30 
 Titawin           HR 458          24.199342  41.405457   4.09 ups   And       7513   9826 2015-12-15 
 Tonatiuh          HR 4609        181.312995  76.905735   5.80 -     Cam      58952 104985 2015-12-15 
 Tureis            HR 3185        121.886037 -24.304324   2.83 rho   Pup      39757  67523 2016-09-12
@@ -255,12 +282,14 @@ Vindemiatrix      HR 4932        195.544157  10.959149   2.85 eps   Vir      636
 Wasat             HR 2777        110.030749  21.982316   3.50 del   Gem      35550  56986 2016-08-21 
 Wazn              HR 2040         87.739968 -35.768310   3.12 bet   Col      27628  39425 2016-07-20 
 Wezen             HR 2693        107.097850 -26.393200   1.83 del   CMa      34444  54605 2016-07-20 
+Xuange            HR 5351        214.095912  46.088306   4.18 lam   Boo      69732 125162 2017-06-30 
 Yed Posterior     HR 6075        244.580374  -4.692510	 3.23 eps   Oph      79882 146791 2016-10-05
 Yed Prior         HR 6056 	 243.586411  -3.694323 	 2.73 del   Oph      79593 146051 2016-10-05 
 Yildun            HR 6789        263.054126  86.586462   4.35 del   UMi      85822 166205 2016-08-21 
 Zaniah            HR 4689        184.976476  -0.666793   3.89 eta   Vir      60129 107259 2016-09-12
 Zaurak            HR 1231         59.507360 -13.508516   2.97 gam   Eri      18543  25025 2016-07-20 
 Zavijava          HR 4540        177.673826   1.764717   3.59 bet   Vir      57757 102870 2016-08-21 
+Zhang             HR 3903        147.869558 -14.846603   4.11 ups01 Hya      48356  85444 2017-06-30
 Zibal             HR 984          48.958436  -8.819731   4.80 zet   Eri      15197  20320 2016-09-12
 Zosma             HR 4357        168.527089  20.523718   2.56 del   Leo      54872  97603 2016-07-20 
 Zubenelgenubi     HR 5531        222.719638 -16.041777   2.75 alf02 Lib      72622 130841 2016-08-21 
