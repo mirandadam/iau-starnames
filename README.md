@@ -1,16 +1,17 @@
 # *iau-starnames*
 Download and parse official star names published by the IAU Working Group on Star Names (WGSN).
 
-The author and this project are not affiliated with the IAU. This is part of the code of the author's master thesis experiments with star trackers.
+I am not affiliated with nor endorsed by the IAU. This is part of the code of my master's dissertation experiments with star trackers.
 
 **The IAU Catalog of Star Names is not a "full" star catalog**, it's intent is to list the official names for the stars it contains and uniquely identify those stars. For larger catalogs, try the full [Hipparcos catalogue](http://cdsarc.u-strasbg.fr/viz-bin/Cat?I/311) (117955 stars, complete to magnitude 7.3[reference needed], does not have star names) or the simpler [Bright Star Catalogue](http://cdsarc.u-strasbg.fr/viz-bin/Cat?V/50) (9110 stars, complete to magnitude 6.5[reference needed], has star names). If you need a larger dataset, the [Gaia Mission](http://www.esa.int/Our_Activities/Space_Science/Gaia) has published the [Gaia Data Release 1](http://cdsarc.u-strasbg.fr/viz-bin/Cat?I/337) with 1142679769 light sources, and features the actual distance and motion parameters of more than 2 million stars.
 
 ## *Catalog description*
 
-The Catalog of Star Names (IAU-CSN) is published online as bulletins and as a text file named _IAU-CSN.txt_. As of 2017-04-20 there are 2 published bulletins, and the text file is being updated regularly.
+The Catalog of Star Names (IAU-CSN) is published online as bulletins and as a plain text file which can be downloaded at http://www.pas.rochester.edu/~emamajek/WGSN/IAU-CSN.txt. As of 2017-08-23 there are 2 published bulletins, and the text file is being updated regularly.
 
 ### *Catalog Preamble*
-The text file contains a preamble explaining it's contents and displays fixed-width columns with the attributes: Name, Designation, RA(J2000), Dec(J2000), Vmag, ID, Con, #, HIP#, HD# and Approved. See the preamble for further information.
+
+The [text file](catalog_data/IAU-CSN.txt) contains a preamble explaining it's contents and displays fixed-width columns with the attributes: Name, Designation, RA(J2000), Dec(J2000), Vmag, ID, Con, #, HIP#, HD# and Approved. See the preamble for further information.
 
 ### *Identifier prefixes*
 
@@ -45,11 +46,11 @@ The JSON version is the easiest version to parse, and can be used directly in we
 
 ## *Resources*
 
-* [Online catalog](https://www.iau.org/public/themes/naming_stars/) with historical context on how stars are named.
+* [Online IAU Catalog of Star Names](https://www.iau.org/public/themes/naming_stars/) with historical context on how stars are named.
 
-* Latest text catalog: [IAU-CSN](http://www.pas.rochester.edu/~emamajek/WGSN/IAU-CSN.txt)
+* Latest plain text catalog: [IAU-CSN](http://www.pas.rochester.edu/~emamajek/WGSN/IAU-CSN.txt)
 
-* [Website](https://www.iau.org/science/scientific_bodies/working_groups/280/) of the IAU WGSN.
+* [IAU Working Group on Star Names Website](https://www.iau.org/science/scientific_bodies/working_groups/280/).
 
 * [Hipparcos catalogue](http://cdsarc.u-strasbg.fr/viz-bin/Cat?I/311) (117955 stars, does not have star names)
 
