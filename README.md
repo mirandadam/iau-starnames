@@ -1,13 +1,26 @@
 # *iau-starnames*
-Download and parse official star names published by the IAU Working Group on Star Names (WGSN).
+This code will download and parse official star names published by the IAU Working Group on Star Names (WGSN).
+
+The data files were last synced with the IAU on 2017-10-12.
 
 I am not affiliated with nor endorsed by the IAU. This is part of the code of my master's dissertation experiments with star trackers.
 
 **The IAU Catalog of Star Names is not a "full" star catalog**, it's intent is to list the official names for the stars it contains and uniquely identify those stars. For larger catalogs, try the full [Hipparcos catalogue](http://cdsarc.u-strasbg.fr/viz-bin/Cat?I/311) (117955 stars, complete to magnitude 7.3[reference needed], does not have star names) or the simpler [Bright Star Catalogue](http://cdsarc.u-strasbg.fr/viz-bin/Cat?V/50) (9110 stars, complete to magnitude 6.5[reference needed], has star names). If you need a larger dataset, the [Gaia Mission](http://www.esa.int/Our_Activities/Space_Science/Gaia) has published the [Gaia Data Release 1](http://cdsarc.u-strasbg.fr/viz-bin/Cat?I/337) with 1142679769 light sources, and features the actual distance and motion parameters of more than 2 million stars.
 
+## *How to use*
+
+download.py will refuse to download a new IAU-CSN file if the old one is still present.
+
+To update the catalog, remove catalog_data/IAU-CSN.txt and run download.py (python 3 is required). This will download the latest catalog_data/IAU-CSN.txt file from the IAU and rebuild the other files in the folder.
+
+catalog_data/IAU-CSN.json is the parsed version of the catalog, and can be used directly.
+
+catalog_data/IAU-CSN_normalized.txt is a cleaner, aligned version of the original file. This can be loaded in spreadsheet programs more easily by using fixed column widths.
+
+
 ## *Catalog description*
 
-The Catalog of Star Names (IAU-CSN) is published online as bulletins and as a plain text file which can be downloaded at http://www.pas.rochester.edu/~emamajek/WGSN/IAU-CSN.txt. As of 2017-08-23 there are 2 published bulletins, and the text file is being updated regularly.
+The Catalog of Star Names (IAU-CSN) is published online as bulletins and as a plain text file which can be downloaded at http://www.pas.rochester.edu/~emamajek/WGSN/IAU-CSN.txt. See the links in the resources section for the published bulletins.
 
 ### *Catalog Preamble*
 
