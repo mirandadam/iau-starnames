@@ -22,6 +22,32 @@ import json
 import re
 from urllib import request
 
+# UTF-8 codes for greek letters from http://simbad.u-strasbg.fr/guide/chA.htx
+greek = {'alf': 'α',
+         'bet': 'β',
+         'gam': 'γ',
+         'del': 'δ',
+         'eps': 'ε',
+         'zet': 'ζ',
+         'eta': 'η',
+         'tet': 'θ',
+         'iot': 'ι',
+         'kap': 'κ',
+         'lam': 'λ',
+         'mu': 'µ',
+         'nu': 'ν',
+         'ksi': 'ξ',
+         'omi': 'o',
+         'pi': 'π',
+         'rho': 'ρ',
+         'sig': 'σ',
+         'tau': 'τ',
+         'ups': 'υ',
+         'phi': 'φ',
+         'khi': 'χ',
+         'psi': 'ψ',
+         'ome': 'ω'}
+
 if not os.path.exists('catalog_data'):
     print('Creating folder "catalog_data"...')
     os.makedirs('catalog_data')
