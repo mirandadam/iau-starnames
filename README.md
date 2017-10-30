@@ -35,6 +35,7 @@ Used in the IAU-CSN:
 * HD - [Henry Draper Catalogue](https://en.wikipedia.org/wiki/Henry_Draper_Catalogue)
 * GJ, GL, WO - [Gliese Catalogue of Nearby Stars](https://en.wikipedia.org/wiki/Gliese_Catalogue_of_Nearby_Stars)
 * PSR - [Pulsating Source of Radio](https://en.wikipedia.org/wiki/PSR_B1257%2B12) - Pulsar
+* WDS_J - [The Washington Double Star Catalog](http://www.usno.navy.mil/USNO/astrometry/optical-IR-prod/wds/WDS)
 
 Other catalogs:
 
@@ -49,9 +50,9 @@ For the wikipedia list of prefixes, see [here](https://en.wikipedia.org/wiki/Sta
 ### *Versions in this repository*
 The [original text file](catalog_data/IAU-CSN.txt) is mirrored in this repository.
 
-The code generates a [normalized version](catalog_data/IAU-CSN_normalized.txt) and a [json version](catalog_data/IAU-CSN.json). Both versions are also stored in this repository.
+The code generates a [normalized version](catalog_data/IAU-CSN_normalized.txt), a [json version](catalog_data/IAU-CSN.json) and a [CSV version](catalog_data/IAU-CSN.csv). These versions are also stored in this repository.
 
-The normalized version removes all spaces after the end of the lines, converts all line endings to a single line break character (all '\r\n' become '\n') and replace tabs ('\t') with the appropriate amount of spaces to respect alignment. All the changes should be invisible in the text editor used to generate the file, but will help when trying to convert the file to a table or writing a program to parse it.
+The normalized version removes all spaces after the end of the lines, converts all line endings to a single line break character (all '\r\n' become '\n') and replace tabs ('\t') with the appropriate amount of spaces to respect alignment. All the changes should be invisible in the text editor used to generate the file, but will help when trying to convert the file to a table or writing a program to parse it. As of 2017-10-28, the IAU file format has changed, and the only difference to the normalized version is the fixing of the entry for Miaplacidus.
 
 The JSON version is the easiest version to parse, and can be used directly in websites.
 
