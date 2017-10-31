@@ -14,6 +14,8 @@ The update on 2017-10-28 changed the file format:
  *removed all the spurious tabs (good for parsing)
  *added a new WDS_J field (neutral for parsing)
  *introduced a misalignment in the Miaplacidus entry (HIP 45238) (bad for parsing)
+A silent update seen on 2017-10-31:
+ *fixes Miaplacidus entry
 '''
 
 import os
@@ -99,8 +101,6 @@ for a in raw_lines:
         # if the first character is a '#', it is a comment - keep the line intact except for the blank spaces at the end and line termination
         normalized_lines.append(a.strip('\r\n\t '))
         continue  # go to next line
-    if a[:11] == 'Miaplacidus':  # WARNING!!! Special case for misaligned entry!!!!
-        a = a[:78] + ' ' * 7 + a[78:]
     # we split the values in the space boundaries:
     entry = collections.OrderedDict()
     csv_line = []

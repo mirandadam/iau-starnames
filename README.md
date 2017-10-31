@@ -15,7 +15,7 @@ To update the catalog, remove catalog_data/IAU-CSN.txt and run download.py (pyth
 
 catalog_data/IAU-CSN.json is the parsed version of the catalog, and can be used directly.
 
-catalog_data/IAU-CSN_normalized.txt is a cleaner, aligned version of the original file. This can be loaded in spreadsheet programs more easily by using fixed column widths.
+catalog_data/IAU-CSN_normalized.txt is a cleaner, aligned version of the original file, intended to make machine parsing easier. Ideally this should be the same as the original file, but there have been points in time in which the original file contained alignment errors.
 
 
 ## *Catalog description*
@@ -52,7 +52,9 @@ The [original text file](catalog_data/IAU-CSN.txt) is mirrored in this repositor
 
 The code generates a [normalized version](catalog_data/IAU-CSN_normalized.txt), a [json version](catalog_data/IAU-CSN.json) and a [CSV version](catalog_data/IAU-CSN.csv). These versions are also stored in this repository.
 
-The normalized version removes all spaces after the end of the lines, converts all line endings to a single line break character (all '\r\n' become '\n') and replace tabs ('\t') with the appropriate amount of spaces to respect alignment. All the changes should be invisible in the text editor used to generate the file, but will help when trying to convert the file to a table or writing a program to parse it. As of 2017-10-28, the IAU file format has changed, and the only difference to the normalized version is the fixing of the entry for Miaplacidus.
+The normalized version removes all spaces after the end of the lines, converts all line endings to a single line break character (all '\r\n' become '\n') and replace tabs ('\t') with the appropriate amount of spaces to respect alignment. All the changes should be invisible in the text editor used to generate the file, but will help when trying to convert the file to a table or writing a program to parse it.
+* As of 2017-10-28, the IAU file format has changed, and the only difference to the normalized version is the fixing of the entry for Miaplacidus.
+* As of 2017-10-31, Miaplacidus entry was fixed. Now there is no difference between the normalized version and the original version
 
 The JSON version is the easiest version to parse, and can be used directly in websites.
 
