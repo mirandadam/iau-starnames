@@ -12,17 +12,17 @@ To update the catalog, remove catalog_data/IAU-CSN.txt and run download.py (pyth
 download.py will produce a warning and will not download a newer IAU-CSN.txt file if the old one is present.
 
 The following files will be rebuilt:
-*[catalog_data/IAU-CSN.txt](catalog_data/IAU-CSN.txt) will be downloaded from [IAU-CSN](http://www.pas.rochester.edu/~emamajek/WGSN/IAU-CSN.txt)
-*[catalog_data/IAU-CSN.json](catalog_data/IAU-CSN.json) is the parsed version of the catalog in json format.
-*[catalog_data/IAU-CSN.csv](catalog_data/IAU-CSN.csv) is the parsed version of the catalog in a tab separated format (TSV). The CSV extension is used for compatibility.
-*[catalog_data/IAU-CSN_normalized.txt](catalog_data/IAU-CSN_normalized.txt) is a cleaner, aligned version of the original file.
+* [catalog_data/IAU-CSN.txt](catalog_data/IAU-CSN.txt) will be downloaded from [IAU-CSN](http://www.pas.rochester.edu/~emamajek/WGSN/IAU-CSN.txt)
+* [catalog_data/IAU-CSN.json](catalog_data/IAU-CSN.json) is the parsed version of the catalog in json format.
+* [catalog_data/IAU-CSN.csv](catalog_data/IAU-CSN.csv) is the parsed version of the catalog in a tab separated format (TSV). The CSV extension is used for compatibility.
+* [catalog_data/IAU-CSN_normalized.txt](catalog_data/IAU-CSN_normalized.txt) is a cleaner, aligned version of the original file.
 
-The IAU-CSN.txt original file is mirrored in this repository.
+The IAU-CSN.txt original file is mirrored in this repository to keep a version history.
 
 
 ## *Catalog description*
 
-The Catalog of Star Names (IAU-CSN) is published online as bulletins and as a plain text file which can be downloaded at http://www.pas.rochester.edu/~emamajek/WGSN/IAU-CSN.txt. See the links in the resources section for the published bulletins.
+The Catalog of Star Names (IAU-CSN) is produced by the [IAU Working Group on Star Names](https://www.iau.org/science/scientific_bodies/working_groups/280/). It is published [online](https://www.iau.org/public/themes/naming_stars/) as bulletins and as a plain text file which can be downloaded at http://www.pas.rochester.edu/~emamajek/WGSN/IAU-CSN.txt.
 
 ### *Catalog Preamble*
 
