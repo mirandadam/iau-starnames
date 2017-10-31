@@ -55,8 +55,8 @@ if not os.path.exists('catalog_data'):
     os.makedirs('catalog_data')
 
 if os.path.exists('catalog_data/IAU-CSN.txt'):  # debug
-    print('"catalog_data/IAU-CSN.txt" already exists.')
-    print('Delete the file and run this script again to repeat the download.')
+    print('"catalog_data/IAU-CSN.txt" already exists. NOT downloading.')
+    print('Delete the file and run this script again to download the current version from the IAU.')
 else:
     print('Downloading star names from WGSN...')
     request.urlretrieve('http://www.pas.rochester.edu/~emamajek/WGSN/IAU-CSN.txt',

@@ -1,21 +1,23 @@
 # *iau-starnames*
-This code will download and parse official star names published by the IAU Working Group on Star Names (WGSN).
+This code will download and parse official star names published by the IAU Working Group on Star Names (WGSN) from [IAU-CSN](http://www.pas.rochester.edu/~emamajek/WGSN/IAU-CSN.txt)
 
-The data files were last synced with the IAU on 2017-10-12.
+I am not affiliated with nor endorsed by the IAU. This work is part of my master's dissertation experiments with star trackers.
 
-I am not affiliated with nor endorsed by the IAU. This is part of the code of my master's dissertation experiments with star trackers.
-
-**The IAU Catalog of Star Names is not a "full" star catalog**, it's intent is to list the official names for the stars it contains and uniquely identify those stars. For larger catalogs, try the full [Hipparcos catalogue](http://cdsarc.u-strasbg.fr/viz-bin/Cat?I/311) (117955 stars, complete to magnitude 7.3[reference needed], does not have star names) or the simpler [Bright Star Catalogue](http://cdsarc.u-strasbg.fr/viz-bin/Cat?V/50) (9110 stars, complete to magnitude 6.5[reference needed], has star names). If you need a larger dataset, the [Gaia Mission](http://www.esa.int/Our_Activities/Space_Science/Gaia) has published the [Gaia Data Release 1](http://cdsarc.u-strasbg.fr/viz-bin/Cat?I/337) with 1142679769 light sources, and features the actual distance and motion parameters of more than 2 million stars.
+**The IAU Catalog of Star Names is not a "full" star catalog**, it's intent is to list the official names for the stars it contains and uniquely identify those stars. For more complete catalogs, try the full [Hipparcos catalogue](http://cdsarc.u-strasbg.fr/viz-bin/Cat?I/311) (117955 stars, complete to magnitude 7.3[reference needed], does not have star names) or the simpler [Bright Star Catalogue](http://cdsarc.u-strasbg.fr/viz-bin/Cat?V/50) (9110 stars, complete to magnitude 6.5[reference needed], has star names). If you need a larger dataset, the [Gaia Mission](http://www.esa.int/Our_Activities/Space_Science/Gaia) has published the [Gaia Data Release 1](http://cdsarc.u-strasbg.fr/viz-bin/Cat?I/337) with 1142679769 light sources, and features the distance and motion parameters of more than 2 million stars.
 
 ## *How to use*
 
-download.py will refuse to download a new IAU-CSN file if the old one is still present.
-
 To update the catalog, remove catalog_data/IAU-CSN.txt and run download.py (python 3 is required). This will download the latest catalog_data/IAU-CSN.txt file from the IAU and rebuild the other files in the folder.
 
-catalog_data/IAU-CSN.json is the parsed version of the catalog, and can be used directly.
+download.py will produce a warning and will not download a newer IAU-CSN.txt file if the old one is present.
 
-catalog_data/IAU-CSN_normalized.txt is a cleaner, aligned version of the original file, intended to make machine parsing easier. Ideally this should be the same as the original file, but there have been points in time in which the original file contained alignment errors.
+The following files will be rebuilt:
+*[catalog_data/IAU-CSN.txt](catalog_data/IAU-CSN.txt) will be downloaded from [IAU-CSN](http://www.pas.rochester.edu/~emamajek/WGSN/IAU-CSN.txt)
+*[catalog_data/IAU-CSN.json](catalog_data/IAU-CSN.json) is the parsed version of the catalog in json format.
+*[catalog_data/IAU-CSN.csv](catalog_data/IAU-CSN.csv) is the parsed version of the catalog in a tab separated format (TSV). The CSV extension is used for compatibility.
+*[catalog_data/IAU-CSN_normalized.txt](catalog_data/IAU-CSN_normalized.txt) is a cleaner, aligned version of the original file.
+
+The IAU-CSN.txt original file is mirrored in this repository.
 
 
 ## *Catalog description*
@@ -24,7 +26,7 @@ The Catalog of Star Names (IAU-CSN) is published online as bulletins and as a pl
 
 ### *Catalog Preamble*
 
-The [text file](catalog_data/IAU-CSN.txt) contains a preamble explaining it's contents and displays fixed-width columns with the attributes: Name, Designation, RA(J2000), Dec(J2000), Vmag, ID, Con, #, HIP#, HD# and Approved. See the preamble for further information.
+The [text file](catalog_data/IAU-CSN.txt) contains a preamble explaining it's contents and displays fixed-width columns with the attributes: Name, Designation, RA(J2000), Dec(J2000), Vmag, ID, Con, #, WDS_J, HIP#, HD# and Approved. See the preamble for further information.
 
 ### *Identifier prefixes*
 
@@ -47,18 +49,12 @@ The BD is supplemented by the Cordoba Durchmusterung (CD) and the Cape Durchmust
 
 For the wikipedia list of prefixes, see [here](https://en.wikipedia.org/wiki/Star_catalogue)
 
-### *Versions in this repository*
-The [original text file](catalog_data/IAU-CSN.txt) is mirrored in this repository.
+## *Updates*
+The data files were last synced with the IAU on 2017-10-31.
 
-The code generates a [normalized version](catalog_data/IAU-CSN_normalized.txt), a [json version](catalog_data/IAU-CSN.json) and a [CSV version](catalog_data/IAU-CSN.csv). These versions are also stored in this repository.
-
-The normalized version removes all spaces after the end of the lines, converts all line endings to a single line break character (all '\r\n' become '\n') and replace tabs ('\t') with the appropriate amount of spaces to respect alignment. All the changes should be invisible in the text editor used to generate the file, but will help when trying to convert the file to a table or writing a program to parse it.
+The IAU_CSN_normalized.txt file is intended to make machine parsing easier. Ideally this should be the same as the original file, but there have been points in time in which the original file contained alignment errors.
 * As of 2017-10-28, the IAU file format has changed, and the only difference to the normalized version is the fixing of the entry for Miaplacidus.
-* As of 2017-10-31, Miaplacidus entry was fixed. Now there is no difference between the normalized version and the original version
-
-The JSON version is the easiest version to parse, and can be used directly in websites.
-
-
+* As of 2017-10-31, Miaplacidus entry was fixed. There is no difference between the normalized and the original versions.
 
 ## *Resources*
 
@@ -73,6 +69,8 @@ The JSON version is the easiest version to parse, and can be used directly in we
 * [Bright Star Catalogue](http://cdsarc.u-strasbg.fr/viz-bin/Cat?V/50) (9110 stars, has star names)
 
 * [Gaia Data Release 1](http://cdsarc.u-strasbg.fr/viz-bin/Cat?I/337) (1142679769 light sources)
+
+* [Washington Visual Double Star Catalog](http://cdsarc.u-strasbg.fr/viz-bin/Cat?B/wds), direct [USNO link](http://www.usno.navy.mil/USNO/astrometry/optical-IR-prod/wds/WDS) (constantly updated, more than 140000 entries)
 
 ## *License*
 This code is released under the MIT license.
