@@ -59,8 +59,13 @@ if os.path.exists('catalog_data/IAU-CSN.txt'):  # debug
     print('Delete the file and run this script again to download the current version from the IAU.')
 else:
     print('Downloading star names from WGSN...')
+    # this will look for http_proxy and https_proxy environment variables:
+    local_proxies = request.getproxies()
+    if local_proxies:
+        print('Proxy server found. Using', local_proxies)
+        request.install_opener(request.build_opener(request.ProxyHandler(local_proxies)))
     request.urlretrieve('http://www.pas.rochester.edu/~emamajek/WGSN/IAU-CSN.txt',
-                        'catalog_data/IAU-CSN.txt')  # debug
+                        'catalog_data/IAU-CSN.txt')
 
 # columns - description, [start col, end col], alignment, validator
 columns = [
