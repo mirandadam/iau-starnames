@@ -23,6 +23,7 @@ import collections
 import json
 import re
 from urllib import request
+import difflib
 
 # UTF-8 codes for greek letters from http://simbad.u-strasbg.fr/guide/chA.htx
 greek = {'alf': 'α',
@@ -138,6 +139,16 @@ csv_text = '\n'.join(csv_lines) + '\n'
 
 print('Recording normalized catalog...')
 open('catalog_data/IAU-CSN_normalized.txt', 'w').write(normalized_text)
+
+# checking for differences in the normalized catalog:
+a = [i.rstrip('\r\n\t ') + '\n' for i in raw_lines]
+b = [i.rstrip('\r\n\t ') + '\n' for i in normalized_lines]
+diffs = list(difflib.context_diff(a, b, fromfile='catalog_data/IAU-CSN.txt', tofile='catalog_data/IAU-CSN_normalized.txt'))
+if not diffs:
+    print('  The downloaded catalog and the normalized catalog have no differences except for blank spaces at the end of lines.')
+else:
+    print('  The downloaded catalog and the normalized catalog have differences:')
+    print(''.join(diffs))
 
 print('Recording csv catalog with tab separator...')
 open('catalog_data/IAU-CSN.csv', 'w').write(csv_text)
