@@ -16,6 +16,10 @@ The update on 2017-10-28 changed the file format:
  *introduced a misalignment in the Miaplacidus entry (HIP 45238) (bad for parsing)
 A silent update seen on 2017-10-31:
  *fixes Miaplacidus entry
+The update on 2017-11-19:
+ *adds Ginan, Larawag and Wurren
+ *adds a few notes at the end of the file
+ *changes order of columns
 '''
 
 import os
@@ -71,18 +75,18 @@ else:
 # columns - description, [start col, end col], alignment, validator
 columns = [
     ['Name', [1, 17], 'left', re.compile('[A-Z][a-z\']+( [A-Z][a-z]+)?').fullmatch],
-    ['Designation', [19, 32], 'left', re.compile('((HR|HD|GJ) [0-9]{1,6}|PSR .+)').fullmatch],
-    ['RA(J2000)', [34, 43], 'right', lambda x: float(x) >= 0 and float(x) <= 360],
-    ['Dec(J2000)', [45, 54], 'right', lambda x: float(x) >= -90 and float(x) <= 90],
-    ['Vmag', [56, 61], 'right', lambda x: x == '-' or (float(x) > -2 and float(x) < 12)],
-    ['ID', [63, 67], 'left', re.compile('([A-Za-z]{0,3}[0-9]{0,4}|-)').fullmatch],
-    ['Con', [69, 71], 'left', re.compile('[A-Z][A-Za-z]{2}').fullmatch],
-    ['#', [73, 75], 'left', re.compile('(-|A|Aa|Aa1|C|Ca)').fullmatch],
-    ['WDS_J', [77, 86], 'left', re.compile('(-|([0-9]{5}[-+][0-9]{4}))').fullmatch],
-    ['HIP#', [88, 94], 'right', re.compile('([0-9]{1,6}|-)').fullmatch],
-    ['HD#', [96, 101], 'right', re.compile('([0-9]{1,6}|-)').fullmatch],
-    ['Approved', [103, 112], 'right', re.compile('20[12][0-9]-(1[0-2]|0[1-9])-(3[01]|[12][0-9]|0[1-9])').fullmatch],
-    ['notes', [114, 114], 'right', re.compile('[*@]?').fullmatch],
+    ['Designation', [19, 30], 'left', re.compile('((HR|HD|GJ) [0-9]{1,6}|PSR .+)').fullmatch],
+    ['ID', [32, 36], 'left', re.compile('([A-Za-z]{0,3}[0-9]{0,4}|-)').fullmatch],
+    ['Con', [38, 40], 'left', re.compile('[A-Z][A-Za-z]{2}').fullmatch],
+    ['#', [42, 45], 'left', re.compile('(-|A|Aa|Aa1|C|Ca)').fullmatch],
+    ['WDS_J', [47, 56], 'left', re.compile('(-|([0-9]{5}[-+][0-9]{4}))').fullmatch],
+    ['Vmag', [58, 63], 'right', lambda x: x == '-' or (float(x) > -2 and float(x) < 12)],
+    ['HIP#', [65, 70], 'right', re.compile('([0-9]{1,6}|-)').fullmatch],
+    ['HD#', [72, 77], 'right', re.compile('([0-9]{1,6}|-)').fullmatch],
+    ['RA(J2000)', [79, 88], 'right', lambda x: float(x) >= 0 and float(x) <= 360],
+    ['Dec(J2000)', [90, 99], 'right', lambda x: float(x) >= -90 and float(x) <= 90],
+    ['Approved', [101, 110], 'right', re.compile('20[12][0-9]-(1[0-2]|0[1-9])-(3[01]|[12][0-9]|0[1-9])').fullmatch],
+    ['notes', [112, 112], 'right', re.compile('[*@]?').fullmatch],
 ]
 for c in columns:
     assert c[1][1] >= c[1][0]  # making sure the intervals make sense
