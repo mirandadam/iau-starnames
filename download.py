@@ -118,7 +118,7 @@ for a in raw_lines:
     # loading values:
     for k, c in enumerate(columns):
         key = c[0]
-        value = a[c[1][0] - 1: c[1][1]].strip('\r\t\n ')
+        value = a[c[1][0] - 1: c[1][1]].strip('\r\n\t ')
         # validation:
         if not c[3](value):
             print('Failed validation of ', c[0])
@@ -142,7 +142,7 @@ normalized_text = '\n'.join(normalized_lines) + '\n'
 csv_text = '\n'.join(csv_lines) + '\n'
 
 print('Recording normalized catalog...')
-open('catalog_data/IAU-CSN_normalized.txt', 'w').write(normalized_text)
+open('catalog_data/IAU-CSN_normalized.txt', 'w', newline='\n').write(normalized_text)
 
 # checking for differences in the normalized catalog:
 a = [i.rstrip('\r\n\t ') + '\n' for i in raw_lines]
@@ -155,8 +155,8 @@ else:
     print(''.join(diffs))
 
 print('Recording csv catalog with tab separator...')
-open('catalog_data/IAU-CSN.csv', 'w').write(csv_text)
+open('catalog_data/IAU-CSN.csv', 'w', newline='\n').write(csv_text)
 
 print('Recording json catalog...')
-open('catalog_data/IAU-CSN.json', 'w').write(json.dumps(json_data, indent=2))
+open('catalog_data/IAU-CSN.json', 'w', newline='\n').write(json.dumps(json_data, indent=2))
 print('done.')
