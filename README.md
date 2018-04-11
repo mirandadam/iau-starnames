@@ -50,7 +50,7 @@ The BD is supplemented by the Cordoba Durchmusterung (CD) and the Cape Durchmust
 For the wikipedia list of prefixes, see [here](https://en.wikipedia.org/wiki/Star_catalogue)
 
 ## *Updates*
-The IAU_CSN.txt data file was last synced with the IAU on 2017-12-12.
+The IAU_CSN.txt data file was last synced with the IAU on 2018-04-11.
 
 The IAU_CSN_normalized.txt file is intended to make machine parsing easier. Ideally this should be the same as the original file, but there have been points in time in which the original file contained alignment errors.
 * As of 2017-10-28, the IAU file format has changed, and the only difference to the normalized version is the fixing of the entry for Miaplacidus.
