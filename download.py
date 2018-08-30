@@ -118,11 +118,13 @@ for a in raw_lines:
     # loading values:
     for k, c in enumerate(columns):
         key = c[0]
-        value = a[c[1][0] - 1: c[1][1]].strip('\r\n\t ')
+        value = a[c[1][0] - 1: c[1][1]].strip('\r\n\t ').replace('_', '-')
         # validation:
-        if not c[3](value):
-            print('Failed validation of ', c[0])
-            print(a)
+        if not c[3](value):  # trying to validate
+            print('Failed validation of ', c[0], ': column', k, 'value "', value, '" is unexpected.')
+            print(a.rstrip('\r\n\t '))
+            print(' ... continuing anyway using the unchanged value.')
+            print('')
         entry[key] = value
         csv_line.append(value)
         if c[2] == 'left':
@@ -150,6 +152,7 @@ b = [i.rstrip('\r\n\t ') + '\n' for i in normalized_lines]
 diffs = list(difflib.context_diff(a, b, fromfile='catalog_data/IAU-CSN.txt', tofile='catalog_data/IAU-CSN_normalized.txt'))
 if not diffs:
     print('  The downloaded catalog and the normalized catalog have no differences except for blank spaces at the end of lines.')
+    print('  (this does not mean that the data did not change from the previous version, it means that the normalization process did not alter the downloaded data too much)')
 else:
     print('  The downloaded catalog and the normalized catalog have differences:')
     print(''.join(diffs))
