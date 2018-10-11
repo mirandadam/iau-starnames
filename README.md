@@ -50,13 +50,14 @@ The BD is supplemented by the Cordoba Durchmusterung (CD) and the Cape Durchmust
 For the wikipedia list of prefixes, see [here](https://en.wikipedia.org/wiki/Star_catalogue)
 
 ## *Updates*
-The IAU_CSN.txt data file was last synced with the IAU on 2018-08-30.
+The IAU_CSN.txt data file was last synced with the IAU on 2018-10-11.
 
 The IAU_CSN_normalized.txt file is intended to make machine parsing easier. Ideally this should be the same as the original file, but there have been points in time in which the original file contained alignment errors.
 * As of 2017-10-28, the IAU file format has changed, and the only difference to the normalized version is the fixing of the entry for Miaplacidus.
 * As of 2017-10-31, Miaplacidus entry was fixed. There is no difference between the normalized and the original versions.
 * As of 2017-11-28, the differences between the normalized file and the original are limited to blank spaces.
-* As of 2018-08-30, 4 star records were updated and 15 more have been added. Polaris Australis HR 7228 had the '-' fields replaced with '_' for some reason. Normalization will replace every '_' with '-'.
+* As of 2018-08-30, 4 star records were updated and 15 more have been added. Polaris Australis HR 7228 had the '-' fields replaced with '\_' for some reason. Normalization will replace every '\_' with '-'.
+* As of 2018-10-11, a greek letter identifier column has been added and 6 star records have been added. More '\_' occurrences that have been all replaced with '-'.
 
 ## *Resources*
 
