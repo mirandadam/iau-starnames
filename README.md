@@ -3,11 +3,11 @@ This code will download and parse official star names published by the IAU Worki
 
 I am not affiliated with nor endorsed by the IAU. This work is part of my master's dissertation experiments with star trackers.
 
-**The IAU Catalog of Star Names is not a "full" star catalog**, it's intent is to list the official names for the stars it contains and uniquely identify those stars. For more complete catalogs, try the full [Hipparcos catalogue](http://cdsarc.u-strasbg.fr/viz-bin/Cat?I/311) (117955 stars, complete to magnitude 7.3[reference needed], does not have star names) or the simpler [Bright Star Catalogue](http://cdsarc.u-strasbg.fr/viz-bin/Cat?V/50) (9110 stars, complete to magnitude 6.5[reference needed], has star names). If you need a larger dataset, the [Gaia Mission](http://www.esa.int/Our_Activities/Space_Science/Gaia) has published the [Gaia Data Release 1](http://cdsarc.u-strasbg.fr/viz-bin/Cat?I/337) with 1142679769 light sources, and features the distance and motion parameters of more than 2 million stars.
+**The IAU Catalog of Star Names is not a "full" star catalog**, it's intent is to list the official names for the stars it contains and uniquely identify those stars. For more complete catalogs, try the full [Hipparcos catalogue](http://cdsarc.u-strasbg.fr/viz-bin/Cat?I/311) (117955 stars, complete to magnitude 7.3[reference needed], does not have star names) or the simpler [Bright Star Catalogue](http://cdsarc.u-strasbg.fr/viz-bin/Cat?V/50) (9110 stars, complete to magnitude 6.5[reference needed], has star names). If you need a larger dataset, the [Gaia Mission](https://www.cosmos.esa.int/web/gaia/home) has published the [Gaia Data Release 2](https://www.cosmos.esa.int/web/gaia/dr2) downloadable [here](http://cdsarc.u-strasbg.fr/viz-bin/cat?I/345) with 1,692,919,135 light sources, and features the distance and motion parameters of more than 1 billion stars.
 
 ## *How to use*
 
-To update the catalog, remove catalog_data/IAU-CSN.txt and run download.py (python 3 is required). This will download the latest catalog_data/IAU-CSN.txt file from the IAU and rebuild the other files in the folder.
+To update the catalog, **remove catalog_data/IAU-CSN.txt** and run download.py (python 3 is required). This will download the latest catalog_data/IAU-CSN.txt file from the IAU and rebuild the other files in the folder.
 
 download.py will produce a warning and will not download a newer IAU-CSN.txt file if the old one is present.
 
@@ -50,7 +50,7 @@ The BD is supplemented by the Cordoba Durchmusterung (CD) and the Cape Durchmust
 For the wikipedia list of prefixes, see [here](https://en.wikipedia.org/wiki/Star_catalogue)
 
 ## *Updates*
-The IAU_CSN.txt data file was last synced with the IAU on 2018-10-11.
+The IAU_CSN.txt data file was last synced with the IAU on 2019-03-14.
 
 The IAU_CSN_normalized.txt file is intended to make machine parsing easier. Ideally this should be the same as the original file, but there have been points in time in which the original file contained alignment errors.
 * As of 2017-10-28, the IAU file format has changed, and the only difference to the normalized version is the fixing of the entry for Miaplacidus.
@@ -71,7 +71,7 @@ The IAU_CSN_normalized.txt file is intended to make machine parsing easier. Idea
 
 * [Bright Star Catalogue](http://cdsarc.u-strasbg.fr/viz-bin/Cat?V/50) (9110 stars, has star names)
 
-* [Gaia Data Release 1](http://cdsarc.u-strasbg.fr/viz-bin/Cat?I/337) (1142679769 light sources)
+* [Gaia Data Release 2](https://www.cosmos.esa.int/web/gaia/dr2) (1,692,919,135 light sources)
 
 * [Washington Visual Double Star Catalog](http://cdsarc.u-strasbg.fr/viz-bin/Cat?B/wds), direct [USNO link](http://www.usno.navy.mil/USNO/astrometry/optical-IR-prod/wds/WDS) (constantly updated, more than 140000 entries)
 
