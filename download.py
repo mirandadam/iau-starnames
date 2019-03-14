@@ -62,9 +62,12 @@ if not os.path.exists('catalog_data'):
     print('Creating folder "catalog_data"...')
     os.makedirs('catalog_data')
 
+not_downloaded = False
 if os.path.exists('catalog_data/IAU-CSN.txt'):  # debug
     print('"catalog_data/IAU-CSN.txt" already exists. NOT downloading.')
+    print('Generating TXT, JSON, and CSV files with old IAU-CSN.txt.')
     print('Delete the file and run this script again to download the current version from the IAU.')
+    not_downloaded = True
 else:
     print('Downloading star names from WGSN...')
     # this will look for http_proxy and https_proxy environment variables:
@@ -153,7 +156,7 @@ open('catalog_data/IAU-CSN_normalized.txt', 'w', newline='\n').write(normalized_
 # checking for differences in the normalized catalog:
 a = [i.rstrip('\r\n\t ') + '\n' for i in raw_lines]
 b = [i.rstrip('\r\n\t ') + '\n' for i in normalized_lines]
-diffs = list(difflib.context_diff(a, b, fromfile='catalog_data/IAU-CSN.txt', tofile='catalog_data/IAU-CSN_normalized.txt'))
+diffs = list(difflib.context_diff(a, b, fromfile='catalog_data/IAU-CSN.txt', tofile='catalog_data/IAU-CSN_normalized.txt', n=0))
 if not diffs:
     print('  The downloaded catalog and the normalized catalog have no differences except for blank spaces at the end of lines.')
     print('  (this does not mean that the data did not change from the previous version, it means that the normalization process did not alter the downloaded data too much)')
@@ -167,3 +170,9 @@ open('catalog_data/IAU-CSN.csv', 'w', newline='\n').write(csv_text)
 print('Recording json catalog...')
 open('catalog_data/IAU-CSN.json', 'w', newline='\n').write(json.dumps(json_data, indent=2))
 print('done.')
+
+if not_downloaded:
+    print('"catalog_data/IAU-CSN.txt" already existed. NOT downloaded.')
+    print('TXT, JSON, and CSV files generated with old IAU-CSN.txt.')
+    print('Delete catalog_data/IAU-CSN.txt and run this script again to download the current version from the IAU.')
+
