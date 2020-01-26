@@ -165,7 +165,7 @@ else:
     print(''.join(diffs))
 
 print('Recording csv catalog with tab separator...')
-open('catalog_data/IAU-CSN.csv', 'w', newline='\n').write(csv_text)
+open('catalog_data/IAU-CSN.tsv', 'w', newline='\n').write(csv_text)
 
 print('Recording json catalog...')
 open('catalog_data/IAU-CSN.json', 'w', newline='\n').write(json.dumps(json_data, indent=2))
