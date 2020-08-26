@@ -50,7 +50,7 @@ The BD is supplemented by the Cordoba Durchmusterung (CD) and the Cape Durchmust
 For the wikipedia list of prefixes, see [here](https://en.wikipedia.org/wiki/Star_catalogue)
 
 ## *Updates*
-The IAU_CSN.txt data file was last synced with the IAU on 2020-01-25.
+The IAU_CSN.txt data file in this repository was last synced with the IAU on 2020-10-26.
 
 The IAU_CSN_normalized.txt file is intended to make machine parsing easier. Ideally this should be the same as the original file, but there have been points in time in which the original file contained alignment errors.
 * As of 2017-10-28, the IAU file format has changed, and the only difference to the normalized version is the fixing of the entry for Miaplacidus.
@@ -58,6 +58,7 @@ The IAU_CSN_normalized.txt file is intended to make machine parsing easier. Idea
 * As of 2017-11-28, the differences between the normalized file and the original are limited to blank spaces.
 * As of 2018-08-30, 4 star records were updated and 15 more have been added. Polaris Australis HR 7228 had the '-' fields replaced with '\_' for some reason. Normalization will replace every '\_' with '-'.
 * As of 2018-10-11, a greek letter identifier column has been added and 6 star records have been added. More '\_' occurrences that have been all replaced with '-'.
+* As of 2020-10-26 two columns were added: the "bnd", "Name/Diacritics"; "Name" was renamed to "Name/ASCII", "Vmag" was renamed to mag, and "Approved" was renamed to "Date". The second "ID" column is called "ID/Diacritics" in this code now. I have changed the way "_"s are treated - it is actually a better character than "-" to denote an empty data field. I believe the IAU catalog has two minor errors at this time: Elgafar star greek id uses a captial greek letter "phi" instead of a lowercase one and Mebsuta star is missing a "_" in column 7.
 
 ## *Resources*
 
@@ -78,4 +79,4 @@ The IAU_CSN_normalized.txt file is intended to make machine parsing easier. Idea
 ## *License*
 This code is released under the MIT license.
 
-The IAU catalog mirrored here is distributed under the Creative Commons Attribution (i.e. free to use in all perpetuity, world-wide, as long as the source is mentioned).
+The catalog mirrored in this repository is distributed by the IAU under the Creative Commons Attribution (i.e. free to use in all perpetuity, world-wide, as long as the source is mentioned). Direct link: [IAU-CSN](http://www.pas.rochester.edu/~emamajek/WGSN/IAU-CSN.txt)

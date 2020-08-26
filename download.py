@@ -80,20 +80,22 @@ else:
 
 # columns - description, [start col, end col], alignment, validator
 columns = [
-    ['Name', [1, 17], 'left', re.compile('[A-Z][a-z\']+( [A-Z][a-z]+)?').fullmatch],
-    ['Designation', [19, 30], 'left', re.compile('((HR|HD|GJ) [0-9]{1,6}|PSR .+)').fullmatch],
-    ['ID', [32, 36], 'left', re.compile('([A-Za-z]{0,3}[0-9]{0,4}|-)').fullmatch],
-    ['ID greek', [38, 42], 'left', re.compile('([^0-9]{0,3}[0-9]{0,4}|-)').fullmatch],
-    ['Con', [44, 46], 'left', re.compile('[A-Z][A-Za-z]{2}').fullmatch],
-    ['#', [48, 51], 'left', re.compile('(-|A|Aa|Aa1|C|Ca|B)').fullmatch],
-    ['WDS_J', [53, 62], 'left', re.compile('(-|([0-9]{5}[-+][0-9]{4}))').fullmatch],
-    ['Vmag', [64, 68], 'right', lambda x: x == '-' or (float(x) > -2 and float(x) < 12)],
-    ['HIP#', [70, 76], 'right', re.compile('([0-9]{1,6}|-)').fullmatch],
-    ['HD#', [78, 83], 'right', re.compile('([0-9]{1,6}|-)').fullmatch],
-    ['RA(J2000)', [85, 94], 'right', lambda x: float(x) >= 0 and float(x) <= 360],
-    ['Dec(J2000)', [96, 105], 'right', lambda x: float(x) >= -90 and float(x) <= 90],
-    ['Approved', [107, 116], 'right', re.compile('20[12][0-9]-(1[0-2]|0[1-9])-(3[01]|[12][0-9]|0[1-9])').fullmatch],
-    ['notes', [118, 118], 'right', re.compile('[*@]?').fullmatch],
+    ['Name/ASCII', [1, 17], 'left', re.compile('[A-Z][a-z\']+( [A-Z][a-z]+)?').fullmatch],
+    ['Name/Diacritics', [19, 35], 'left', re.compile('.*').fullmatch],
+    ['Designation', [37, 48], 'left', re.compile('((HR |HD |GJ |WASP-|HAT-P-|XO-|HIP )[0-9]{1,6}|PSR .+)').fullmatch],
+    ['ID', [50, 54], 'left', re.compile('([A-Za-z]{0,3}[0-9]{0,4}|_)').fullmatch],
+    ['ID/Diacritics', [56, 60], 'left', re.compile('(V[0-9]+|[α-ω]{0,3}[0-9]{0,4}|_)').fullmatch],
+    ['Con', [62, 64], 'left', re.compile('(_|[A-Z][A-Za-z]{2})').fullmatch],
+    ['#', [66, 69], 'left', re.compile('(_|A|Aa|Aa1|C|Ca|B)').fullmatch],
+    ['WDS_J', [71, 80], 'left', re.compile('(_|([0-9]{5}[-+][0-9]{4}))').fullmatch],
+    ['mag', [82, 86], 'right', lambda x: x == '_' or (float(x) > -2 and float(x) < 13)],
+    ['bnd', [88, 89], 'right', re.compile('[G|V]').fullmatch],
+    ['HIP', [91, 96], 'right', re.compile('([0-9]{1,6}|_)').fullmatch],
+    ['HD', [98, 103], 'right', re.compile('([0-9]{1,6}|_)').fullmatch],
+    ['RA(J2000)', [105, 114], 'right', lambda x: float(x) >= 0 and float(x) <= 360],
+    ['Dec(J2000)', [116, 125], 'right', lambda x: float(x) >= -90 and float(x) <= 90],
+    ['Date', [127, 136], 'right', re.compile('20[12][0-9]-(1[0-2]|0[1-9])-(3[01]|[12][0-9]|0[1-9])').fullmatch],
+    ['notes', [138, 138], 'right', re.compile('[*@]?').fullmatch],
 ]
 for c in columns:
     assert c[1][1] >= c[1][0]  # making sure the intervals make sense
@@ -125,10 +127,10 @@ for a in raw_lines:
     # loading values:
     for k, c in enumerate(columns):
         key = c[0]
-        value = a[c[1][0] - 1: c[1][1]].strip('\r\n\t ').replace('_', '-')
+        value = a[c[1][0] - 1: c[1][1]].strip('\r\n\t ')#.replace('_', '-')
         # validation:
         if not c[3](value):  # trying to validate
-            print('Failed validation of ', c[0], ': column', k, 'value "', value, '" is unexpected.')
+            print('Failed validation of ', c[0], ': column ', k+1, ' value "', value, '" is unexpected.',sep='')
             print(a.rstrip('\r\n\t '))
             print(' ... continuing anyway using the unchanged value.')
             print('')
@@ -175,4 +177,3 @@ if not_downloaded:
     print('"catalog_data/IAU-CSN.txt" already existed. NOT downloaded.')
     print('TXT, JSON, and CSV files generated with old IAU-CSN.txt.')
     print('Delete catalog_data/IAU-CSN.txt and run this script again to download the current version from the IAU.')
-
