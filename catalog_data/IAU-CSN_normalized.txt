@@ -1,21 +1,14 @@
 # "IAU Catalog of Star Names (IAU-CSN)"
-# IAU Division C Working Group on Star Names (WGSN)
-# https://www.iau.org/science/scientific_bodies/working_groups/280/
-# WGSN Chair: Eric Mamajek. Email questions or comments to: IAUWGSN@gmail.com
-# Last updated 2020-03-15 (see notes on latest edits at end of file)
+# IAU Division C Working Group on Star Names (WGSN) https://www.iau.org/science/scientific_bodies/working_groups/280/
+# WGSN Chair: Susanne Hoffmann. WGSN Secretary: Eric Mamajek. Email questions or comments to: starnames@exopla.net
+# Last updated 2022-04-04 (see notes on latest edits at end of file)
 #
-# For use of the contents of the data of this file, we encourage users
-# to refer to the (identical) official IAU version of the data at:
-# https://www.iau.org/public/themes/naming_stars/. At times there may
-# be a time delay between the posting of names in this file and what
-# is posted on the IAU website. All IAU-produced products (Images,
-# Videos, Texts) are released under Creative Commons Attribution
-# (i.e. free to use in all perpetuity, world-wide, as long as the
-# source is mentioned). Rows (2) and (5) require UTF-8 encoding (For
-# Firefox browser, set > View > Text Encoding > Unicode).  WGSN is
-# working to add brief summaries of etymological information to future
-# editions of this table.
-#
+# For use of the contents of the data of this file, we encourage users to cite the official IAU version of the data at:
+$ https://www.iau.org/public/themes/naming_stars/. At times there may be a time delay between the posting of names in this file and what
+# is posted on the IAU website. All IAU-produced products (Images, Videos, Texts) are released under Creative Commons Attribution
+# (i.e. free to use in all perpetuity, world-wide, as long as the source is mentioned). Rows (2) and (5) require UTF-8 encoding
+# (For Firefox browser, set > View > Repair Text Encoding).  WGSN is working to add brief summaries of etymological information
+# to future editions of this table.
 #(1)              (2)               (3)          (4)   (5)   (6) (7)  (8)         (9)  (10) (11)   (12) (13)       (14)       (15)       (16)
 #Name/ASCII       Name/Diacritics   Designation  ID    ID    Con #    WDS_J       mag  bnd  HIP     HD  RA(J2000)  Dec(J2000) Date       Notes
 Absolutno         Absolutno         XO-5         _     _     Lyn _    _          11.95  G      _      _ 116.716506  39.094572 2019-12-17  
@@ -147,7 +140,7 @@ Chalawan          Chalawan          HR 4277      47    47    UMa _    _         
 Chamukuy          Chamukuy          HR 1412      tet02 θ2    Tau Aa   04287+1552  3.73  V  20894  28319  67.165586  15.870882 2017-09-05  
 Chaophraya        Chaophraya        WASP-50      _     _     Eri _    _          11.55  G      _      _ 043.688059 -10.898063 2019-12-17  
 Chara             Chara             HR 4785      bet   β     CVn Aa   12337+4121  4.24  V  61317 109358 188.435603  41.357479 2016-07-20  
-Chason            Chaso             HAT-P-5      _     _     Lyr _    18176+3637 11.82  G      _      _ 274.405470  36.621436 2019-12-17  
+Chason            Chasoň            HAT-P-5      _     _     Lyr _    18176+3637 11.82  G      _      _ 274.405470  36.621436 2019-12-17  
 Chechia           Chechia           HD 192699    _     _     Aql _    _           6.44  V  99894 192699 304.025017   4.580795 2019-12-17  
 Chertan           Chertan           HR 4359      tet   θ     Leo _    _           3.33  V  54879  97633 168.560019  15.429571 2016-07-20  
 Citadelle         Citadelle         HD 1502      _     _     Psc _    _           8.36  V   1547   1502   4.821110  14.054756 2019-12-17  
@@ -198,6 +191,7 @@ Furud             Furud             HR 2282      zet   ζ     CMa Aa   06203-300
 Fuyue             Fuyue             HR 6630      _     _     Sco _    17499-3703  3.19  V  87261 161892 267.464503 -37.043305 2017-06-30  
 Gacrux            Gacrux            HR 4763      gam   γ     Cru _    12312-5707  1.59  V  61084 108903 187.791498 -57.113213 2016-07-20  
 Gakyid            Gakyid            HD 73534     _     _     Cnc _    _           8.23  V  42446  73534 129.815846  12.960375 2019-12-17  
+Geminga           Geminga           PSR B0633+17 _     _     Gem _    _              _  _      _      _  98.475638  17.770253 2022-04-04  
 Giausar           Giausar           HR 4434      lam   λ     Dra _    _           3.82  V  56211 100029 172.850920  69.331075 2017-02-01  
 Gienah            Gienah            HR 4662      gam   γ     Crv _    12158-1733  2.58  V  59803 106625 183.951543 -17.541929 2016-11-06  
 Ginan             Ginan             HR 4700      eps   ε     Cru _    _           3.59  V  60260 107446 185.340039 -60.401147 2017-11-17  
@@ -253,7 +247,7 @@ Larawag           Larawag           HR 6241      eps   ε     Sco _    _        
 Lerna             Lerna             HAT-P-42     _     _     Hya _    _          12.00  G      _      _ 135.344371   6.097227 2019-12-17  
 Lesath            Lesath            HR 6508      ups   υ     Sco _    _           2.70  V  85696 158408 262.690979 -37.295813 2016-08-21  
 Libertas          Libertas          HR 7595      ksi   ξ     Aql A    19542+0828  4.71  V  97938 188310 298.562008   8.461453 2015-12-15  
-Lich              Lich              PSR B1257+12 _     _     Vir _    _              _  V      _      _ 195.012701  12.682417 2015-12-15  
+Lich              Lich              PSR B1257+12 _     _     Vir _    _              _  _      _      _ 195.012701  12.682417 2015-12-15  
 Liesma            Liesma            HD 118203    _     _     UMa _    _           8.05  V  66192 118203 203.510581  53.728527 2019-12-17  
 Lilii Borea       Lilii Borea       HR 824       39    39    Ari _    _           4.52  V  13061  17361  41.977256  29.247115 2017-09-05  
 Lionrock          Lionrock          HD 212771    _     _     Aqr _    _           7.60  V 110813 212771 336.762801 -17.263656 2019-12-17  
@@ -322,6 +316,7 @@ Nekkar            Nekkar            HR 5602      bet   β     Boo _    _        
 Nembus            Nembus            HR 464       51    51    And _    _           3.59  V   7607   9927  24.498154  48.628214 2017-09-05  
 Nenque            Nenque            HD 6434      _     _     Phe _    _           7.72  V   5054   6434  16.167293 -39.488218 2019-12-17  
 Nervia            Nervia            HD 49674     _     _     Aur A    06515+4052  8.10  V  32916  49674 102.877151  40.867757 2019-12-17  
+Nganurganity      Nganurganity      HR 2646      sig   σ     CMa _    07017-2756  3.49  V  33856  52877 105.429782 -27.934830 2017-09-05  
 Nihal             Nihal             HR 1829      bet   β     Lep A    05282-2046  2.83  V  25606  36079  82.061346 -20.759441 2016-07-20  
 Nikawiy           Nikawiy           HD 136418    _     _     Boo _    _           7.88  V  74961 136418 229.775760  41.733206 2019-12-17  
 Nosaxa            Nosaxa            HD 48265     _     _     Pup _    _           8.05  V  31895  48265 100.007196 -48.541956 2019-12-17  
@@ -356,6 +351,7 @@ Procyon           Procyon           HR 2943      alf   α     CMi A    07393+051
 Propus            Propus            HR 2216      eta   η     Gem A    06149+2230  3.32  V  29655  42995  93.719405  22.506794 2016-07-20  
 Proxima Centauri  Proxima Centauri  GJ 551       alf   α     Cen C    14396-6050 11.01  V  70890 999999 217.428953 -62.679484 2016-08-21 *
 Ran               Ran               HR 1084      eps   ε     Eri _    03329-0927  3.73  V  16537  22049  53.232687  -9.458259 2015-12-15  
+Rana              Rana              HR 1136      del   δ     Eri _    _           3.53  V  17378  23249  55.812086  -9.763392 2022-04-04  
 Rapeto            Rapeto            HD 153950    _     _     Sco _    _           7.39  V  83547 153950 256.128629 -43.309770 2019-12-17  
 Rasalas           Rasalas           HR 3905      mu    μ     Leo _    _           3.88  V  48455  85503 148.190903  26.006953 2016-09-12  
 Rasalgethi        Rasalgethi        HR 6406      alf01 α1    Her Aa   17146+1423  3.37  V  84345 156014 258.661910  14.390333 2016-06-30  
@@ -443,7 +439,6 @@ Tureis            Tureis            HR 3185      rho   ρ     Pup A    08075-241
 Ukdah             Ukdah             HR 3845      iot   ι     Hya _    _           3.90  V  47431  83618 144.964008  -1.142810 2018-06-01  
 Uklun             Uklun             HD 102117    _     _     Cen _    _           7.47  V  57291 102117 176.210254 -58.703710 2019-12-17  
 Unukalhai         Unukalhai         HR 5854      alf   α     Ser _    15443+0626  2.63  V  77070 140573 236.066976   6.425629 2016-08-21  
-Unurgunite        Unurgunite        HR 2646      sig   σ     CMa _    07017-2756  3.49  V  33856  52877 105.429782 -27.934830 2017-09-05  
 Uruk              Uruk              HD 231701    _     _     Sge _    _           8.97  V  96078 231701 293.017338  16.474289 2019-12-17  
 Vega              Vega              HR 7001      alf   α     Lyr _    18369+3846  0.03  V  91262 172167 279.234735  38.783689 2016-06-30  
 Veritate          Veritate          HR 8930      14    14    And A    23313+3914  5.22  V 116076 221345 352.822556  39.236197 2015-12-15  
@@ -530,7 +525,6 @@ Zubeneschamali    Zubeneschamali    HR 5685      bet   β     Lib _    _        
 #      campaign, and the winning entries were reviewed and adopted by
 #      the IAU100 NameExoWorlds Steering Committee (which had
 #      representatives from WGSN).
-#
 # (16) Notes:
 #      * Acamar is tet01 Eri = tet Eri A = WDS J02583-4018A.
 #      * Algieba is gam01 Leo = gam Leo A = WDS J10200+1950A.
@@ -585,5 +579,15 @@ Zubeneschamali    Zubeneschamali    HR 5685      bet   β     Lib _    _        
 #             name-designation assignments have been checked again
 #             with: http://www.nameexoworlds.iau.org/final-results.
 #             If you used the 2020-02-13 or 2020-03-01 versions,
-#             please update to this latest version. Thanks to Eduardo
-#             Penteado for pointing out the errors.
+#             please update to this latest version. Thank you to
+#             Eduardo Penteado for pointing out the errors.
+# 2021-04-04: Fixed accented version "Chaso" to "Chasoň" for HAT-P-5.
+#             Clarification for HD 149143: The star name is spelled
+#             "Rosalíadecastro" and the exoplanet b is "Ríosar". The
+#             accents were accidently omitted in the IAU100 NameExoWorlds
+#             announcement materials.
+# 2022-04-04: Added "Geminga" and "Rana". See Annual Report WGSN 2021:
+#             https://www.iau.org/static/science/scientific_bodies/working_groups/280/wg-starnames-annual-report-2021-2022.pdf
+
+
+

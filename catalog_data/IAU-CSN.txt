@@ -1,22 +1,15 @@
 # "IAU Catalog of Star Names (IAU-CSN)"
-# IAU Division C Working Group on Star Names (WGSN)
-# https://www.iau.org/science/scientific_bodies/working_groups/280/
-# WGSN Chair: Eric Mamajek. Email questions or comments to: IAUWGSN@gmail.com
-# Last updated 2020-03-15 (see notes on latest edits at end of file)
+# IAU Division C Working Group on Star Names (WGSN) https://www.iau.org/science/scientific_bodies/working_groups/280/
+# WGSN Chair: Susanne Hoffmann. WGSN Secretary: Eric Mamajek. Email questions or comments to: starnames@exopla.net
+# Last updated 2022-04-04 (see notes on latest edits at end of file)
 #
-# For use of the contents of the data of this file, we encourage users
-# to refer to the (identical) official IAU version of the data at:
-# https://www.iau.org/public/themes/naming_stars/. At times there may
-# be a time delay between the posting of names in this file and what
-# is posted on the IAU website. All IAU-produced products (Images,
-# Videos, Texts) are released under Creative Commons Attribution
-# (i.e. free to use in all perpetuity, world-wide, as long as the
-# source is mentioned). Rows (2) and (5) require UTF-8 encoding (For
-# Firefox browser, set > View > Text Encoding > Unicode).  WGSN is
-# working to add brief summaries of etymological information to future
-# editions of this table.
-#
-#(1)              (2)               (3)          (4)   (5)   (6) (7)  (8)         (9)  (10) (11)   (12) (13)       (14)       (15)       (16)
+# For use of the contents of the data of this file, we encourage users to cite the official IAU version of the data at:
+$ https://www.iau.org/public/themes/naming_stars/. At times there may be a time delay between the posting of names in this file and what
+# is posted on the IAU website. All IAU-produced products (Images, Videos, Texts) are released under Creative Commons Attribution
+# (i.e. free to use in all perpetuity, world-wide, as long as the source is mentioned). Rows (2) and (5) require UTF-8 encoding
+# (For Firefox browser, set > View > Repair Text Encoding).  WGSN is working to add brief summaries of etymological information
+# to future editions of this table.
+#(1)              (2)               (3)          (4)   (5)   (6) (7)  (8)         (9)  (10) (11)   (12) (13)       (14)       (15)       (16)    
 #Name/ASCII       Name/Diacritics   Designation  ID    ID    Con #    WDS_J       mag  bnd  HIP     HD  RA(J2000)  Dec(J2000) Date       Notes
 Absolutno         Absolutno         XO-5         _     _     Lyn _    _          11.95  G      _      _ 116.716506  39.094572 2019-12-17 
 Acamar            Acamar            HR 897       tet01 θ1    Eri A    02583-4018  2.88  V  13847  18622  44.565311 -40.304672 2016-07-20 *
@@ -36,7 +29,7 @@ Albaldah          Albaldah          HR 7264      pi    π     Sgr A    19098-210
 Albali            Albali            HR 7950      eps   ε     Aqr _    _           3.78  V 102618 198001 311.918969  -9.495775 2016-09-12 
 Albireo           Albireo           HR 7417      bet   β     Cyg Aa   19307+2758  3.37  V  95947 183912 292.680351  27.959692 2016-07-20 
 Alchiba           Alchiba           HR 4623      alf   α     Crv _    _           4.02  V  59199 105452 182.103402 -24.728875 2016-09-12 
-Alcor             Alcor             HR 5062      80    80    UMa Ca   13239+5456  3.99  V  65477 116842 201.306403  54.987954 2016-06-30 *
+Alcor             Alcor             HR 5062      80    80    UMa Ca   13239+5456  3.99  V  65477 116842 201.306403  54.987954 2016-06-30 * 
 Alcyone           Alcyone           HR 1165      eta   η     Tau A    03475+2406  2.85  V  17702  23630  56.871152  24.105136 2016-06-30 
 Aldebaran         Aldebaran         HR 1457      alf   α     Tau _    04359+1631  0.87  V  21421  29139  68.980163  16.509302 2016-06-30 
 Alderamin         Alderamin         HR 8162      alf   α     Cep _    21186+6235  2.45  V 105199 203280 319.644885  62.585574 2016-07-20 
@@ -46,7 +39,7 @@ Aldulfin          Aldulfin          HR 7852      eps   ε     Del _    _        
 Alfirk            Alfirk            HR 8238      bet   β     Cep Aa   21287+7034  3.23  V 106032 205021 322.164987  70.560715 2016-08-21 
 Algedi            Algedi            HR 7754      alf02 α2    Cap _    20181-1233  3.58  V 100064 192947 304.513566 -12.544852 2016-08-21 
 Algenib           Algenib           HR 39        gam   γ     Peg _    00132+1511  2.83  V   1067    886   3.308963  15.183594 2016-06-30 
-Algieba           Algieba           HR 4057      gam01 γ1    Leo _    10200+1950  2.61  V  50583  89484 154.993144  19.841489 2016-07-20 *
+Algieba           Algieba           HR 4057      gam01 γ1    Leo _    10200+1950  2.61  V  50583  89484 154.993144  19.841489 2016-07-20 * 
 Algol             Algol             HR 936       bet   β     Per Aa1  03082+4057  2.09  V  14576  19356  47.042215  40.955648 2016-06-30 
 Algorab           Algorab           HR 4757      del   δ     Crv A    12299-1631  2.94  V  60965 108767 187.466063 -16.515431 2016-07-20 
 Alhena            Alhena            HR 2421      gam   γ     Gem Aa   06377+1624  1.93  V  31681  47105  99.427960  16.399280 2016-07-20 
@@ -58,7 +51,7 @@ Alkaphrah         Alkaphrah         HR 3594      kap   κ     UMa A    09036+470
 Alkarab           Alkarab           HR 8905      ups   υ     Peg _    _           4.42  V 115623 220657 351.344931  23.404100 2017-09-05 
 Alkes             Alkes             HR 4287      alf   α     Crt _    _           4.08  V  53740  95272 164.943604 -18.298783 2016-09-12 
 Almaaz            Almaaz            HR 1605      eps   ε     Aur _    05020+4349  3.03  V  23416  31964  75.492219  43.823307 2017-02-01 
-Almach            Almach            HR 603       gam   γ     And A    02039+4220  2.10  V   9640  12533  30.974804  42.329725 2016-07-20 *
+Almach            Almach            HR 603       gam   γ     And A    02039+4220  2.10  V   9640  12533  30.974804  42.329725 2016-07-20 * 
 Alnair            Alnair            HR 8425      alf   α     Gru _    22082-4658  1.73  V 109268 209952 332.058270 -46.960974 2016-07-20 
 Alnasl            Alnasl            HR 6746      gam02 γ2    Sgr _    _           2.98  V  88635 165135 271.452025 -30.424100 2016-08-21 
 Alnilam           Alnilam           HR 1903      eps   ε     Ori _    05362-0112  1.69  V  26311  37128  84.053389  -1.201919 2016-07-20 
@@ -67,7 +60,7 @@ Alniyat           Alniyat           HR 6084      sig   σ     Sco Aa1  16212-253
 Alphard           Alphard           HR 3748      alf   α     Hya _    09276-0840  1.99  V  46390  81797 141.896847  -8.658602 2016-07-20 
 Alphecca          Alphecca          HR 5793      alf   α     CrB _    _           2.22  V  76267 139006 233.671950  26.714693 2016-07-20 
 Alpheratz         Alpheratz         HR 15        alf   α     And Aa   00084+2905  2.07  V    677    358   2.096916  29.090431 2016-06-30 
-Alpherg           Alpherg           HR 437       eta   η     Psc A    01315+1521  3.83  V   7097   9270  22.870873  15.345823 2018-06-01
+Alpherg           Alpherg           HR 437       eta   η     Psc A    01315+1521  3.83  V   7097   9270  22.870873  15.345823 2018-06-01 
 Alrakis           Alrakis           HR 6370      mu    μ     Dra A    17053+5428  5.55  V  83608 154906 256.333807  54.470078 2017-02-01 
 Alrescha          Alrescha          HR 596       alf   α     Psc A    02020+0246  3.82  V   9487  12446  30.511772   2.763735 2016-08-21 
 Alruba            Alruba            HR 6618      _     _     Dra _    _           5.75  V  86782 161693 265.996568  53.801715 2018-06-01 
@@ -147,7 +140,7 @@ Chalawan          Chalawan          HR 4277      47    47    UMa _    _         
 Chamukuy          Chamukuy          HR 1412      tet02 θ2    Tau Aa   04287+1552  3.73  V  20894  28319  67.165586  15.870882 2017-09-05 
 Chaophraya        Chaophraya        WASP-50      _     _     Eri _    _          11.55  G      _      _ 043.688059 -10.898063 2019-12-17 
 Chara             Chara             HR 4785      bet   β     CVn Aa   12337+4121  4.24  V  61317 109358 188.435603  41.357479 2016-07-20 
-Chason            Chaso             HAT-P-5      _     _     Lyr _    18176+3637 11.82  G      _      _ 274.405470  36.621436 2019-12-17 
+Chason            Chasoň            HAT-P-5      _     _     Lyr _    18176+3637 11.82  G      _      _ 274.405470  36.621436 2019-12-17 
 Chechia           Chechia           HD 192699    _     _     Aql _    _           6.44  V  99894 192699 304.025017   4.580795 2019-12-17 
 Chertan           Chertan           HR 4359      tet   θ     Leo _    _           3.33  V  54879  97633 168.560019  15.429571 2016-07-20 
 Citadelle         Citadelle         HD 1502      _     _     Psc _    _           8.36  V   1547   1502   4.821110  14.054756 2019-12-17 
@@ -175,7 +168,7 @@ Dziban            Dziban            HR 6636      psi01 ψ1    Dra A    17419+720
 Ebla              Ebla              HD 218566    _     _     Psc _    _           8.59  V 114322 218566 347.294696  -2.260746 2019-12-17 
 Edasich           Edasich           HR 5744      iot   ι     Dra _    15249+5858  3.29  V  75458 137759 231.232396  58.966063 2015-12-15 
 Electra           Electra           HR 1142      17    17    Tau _    03449+2407  3.72  V  17499  23302  56.218904  24.113336 2016-08-21 
-Elgafar           Elgafar           HR 5409      phi   ϕ     Vir A    14282-0214  4.84  V  70755 126868 217.050575  -2.227957 2018-06-01
+Elgafar           Elgafar           HR 5409      phi   ϕ     Vir A    14282-0214  4.84  V  70755 126868 217.050575  -2.227957 2018-06-01 
 Elkurud           Elkurud           HR 2177      tet   θ     Col _    _           5.00  V  29034  42167  91.881801 -37.252920 2018-06-01 
 Elnath            Elnath            HR 1791      bet   β     Tau Aa   05263+2836  1.65  V  25428  35497  81.572971  28.607452 2016-07-20 
 Eltanin           Eltanin           HR 6705      gam   γ     Dra _    17566+5129  2.24  V  87833 164058 269.151541  51.488896 2016-08-21 
@@ -185,7 +178,7 @@ Errai             Errai             HR 8974      gam   γ     Cep Aa   23393+773
 Fafnir            Fafnir            HR 6945      42    42    Dra A    18260+6534  4.82  V  90344 170693 276.496406  65.563480 2015-12-15 
 Fang              Fang              HR 5944      pi    π     Sco Aa   15589-2607  2.89  V  78265 143018 239.712972 -26.114108 2017-06-30 
 Fawaris           Fawaris           HR 7528      del   δ     Cyg A    19450+4508  2.90  V  97165 186882 296.243658  45.130810 2018-06-01 
-Felis             Felis             HR 3923      _     _     Hya _    _           4.94  V  48615  85951 148.717528 -19.009336 2018-06-01   
+Felis             Felis             HR 3923      _     _     Hya _    _           4.94  V  48615  85951 148.717528 -19.009336 2018-06-01 
 Felixvarela       Felixvarela       BD-17 63     _     _     Cet _    _           9.62  V   2247      _   7.142942 -16.226345 2019-12-17 
 Flegetonte        Flegetonte        HD 102195    _     _     Vir _    11457+0249  8.07  V  57370 102195 176.426220   2.821479 2019-12-17 
 Fomalhaut         Fomalhaut         HR 8728      alf   α     PsA A    22577-2937  1.17  V 113368 216956 344.412693 -29.622237 2015-12-15 
@@ -198,6 +191,7 @@ Furud             Furud             HR 2282      zet   ζ     CMa Aa   06203-300
 Fuyue             Fuyue             HR 6630      _     _     Sco _    17499-3703  3.19  V  87261 161892 267.464503 -37.043305 2017-06-30 
 Gacrux            Gacrux            HR 4763      gam   γ     Cru _    12312-5707  1.59  V  61084 108903 187.791498 -57.113213 2016-07-20 
 Gakyid            Gakyid            HD 73534     _     _     Cnc _    _           8.23  V  42446  73534 129.815846  12.960375 2019-12-17 
+Geminga           Geminga           PSR B0633+17 _     _     Gem _    _              _  _      _      _  98.475638  17.770253 2022-04-04 
 Giausar           Giausar           HR 4434      lam   λ     Dra _    _           3.82  V  56211 100029 172.850920  69.331075 2017-02-01 
 Gienah            Gienah            HR 4662      gam   γ     Crv _    12158-1733  2.58  V  59803 106625 183.951543 -17.541929 2016-11-06 
 Ginan             Ginan             HR 4700      eps   ε     Cru _    _           3.59  V  60260 107446 185.340039 -60.401147 2017-11-17 
@@ -253,7 +247,7 @@ Larawag           Larawag           HR 6241      eps   ε     Sco _    _        
 Lerna             Lerna             HAT-P-42     _     _     Hya _    _          12.00  G      _      _ 135.344371   6.097227 2019-12-17 
 Lesath            Lesath            HR 6508      ups   υ     Sco _    _           2.70  V  85696 158408 262.690979 -37.295813 2016-08-21 
 Libertas          Libertas          HR 7595      ksi   ξ     Aql A    19542+0828  4.71  V  97938 188310 298.562008   8.461453 2015-12-15 
-Lich              Lich              PSR B1257+12 _     _     Vir _    _              _  V      _      _ 195.012701  12.682417 2015-12-15 
+Lich              Lich              PSR B1257+12 _     _     Vir _    _              _  _      _      _ 195.012701  12.682417 2015-12-15 
 Liesma            Liesma            HD 118203    _     _     UMa _    _           8.05  V  66192 118203 203.510581  53.728527 2019-12-17 
 Lilii Borea       Lilii Borea       HR 824       39    39    Ari _    _           4.52  V  13061  17361  41.977256  29.247115 2017-09-05 
 Lionrock          Lionrock          HD 212771    _     _     Aqr _    _           7.60  V 110813 212771 336.762801 -17.263656 2019-12-17 
@@ -322,6 +316,7 @@ Nekkar            Nekkar            HR 5602      bet   β     Boo _    _        
 Nembus            Nembus            HR 464       51    51    And _    _           3.59  V   7607   9927  24.498154  48.628214 2017-09-05 
 Nenque            Nenque            HD 6434      _     _     Phe _    _           7.72  V   5054   6434  16.167293 -39.488218 2019-12-17 
 Nervia            Nervia            HD 49674     _     _     Aur A    06515+4052  8.10  V  32916  49674 102.877151  40.867757 2019-12-17 
+Nganurganity      Nganurganity      HR 2646      sig   σ     CMa _    07017-2756  3.49  V  33856  52877 105.429782 -27.934830 2017-09-05 
 Nihal             Nihal             HR 1829      bet   β     Lep A    05282-2046  2.83  V  25606  36079  82.061346 -20.759441 2016-07-20 
 Nikawiy           Nikawiy           HD 136418    _     _     Boo _    _           7.88  V  74961 136418 229.775760  41.733206 2019-12-17 
 Nosaxa            Nosaxa            HD 48265     _     _     Pup _    _           8.05  V  31895  48265 100.007196 -48.541956 2019-12-17 
@@ -341,7 +336,7 @@ Pherkad           Pherkad           HR 5735      gam   γ     UMi _    _        
 Phoenicia         Phoenicia         HD 192263    V1703 V1703 Aql _    20140-0052  7.79  V  99711 192263 303.499356  -0.866881 2019-12-17 
 Piautos           Piautos           HR 3268      lam   λ     Cnc A    _           5.92  V  40881  70011 125.133901  24.022311 2018-06-01
 Pincoya           Pincoya           HD 164604    _     _     Sgr _    _           9.66  V  88414 164604 270.778888 -28.560655 2019-12-17 
-Pipirima          Pipirima          HR 6252      mu02  μ2    Sco A    16523-3801  3.56  V  82545 151985 253.083939 -38.017535 2017-09-05 *
+Pipirima          Pipirima          HR 6252      mu02  μ2    Sco A    16523-3801  3.56  V  82545 151985 253.083939 -38.017535 2017-09-05 * 
 Pipoltr           Pipoltr           TrES-3       V1434 V1434 Her _    _          12.20  G      _      _ 268.029244  37.546177 2019-12-17 
 Pleione           Pleione           HR 1180      28    28    Tau Aa   03492+2408  5.05  V  17851  23862  57.296738  24.136710 2016-06-30 
 Poerava           Poerava           HD 221287    _     _     Tuc _    _           7.82  V 116084 221287 352.834742 -58.209731 2019-12-17 
@@ -354,8 +349,9 @@ Praecipua         Praecipua         HR 4247      46    46    LMi _    _         
 Prima Hyadum      Prima Hyadum      HR 1346      gam   γ     Tau A    04198+1538  3.65  V  20205  27371  64.948349  15.627643 2017-09-05 
 Procyon           Procyon           HR 2943      alf   α     CMi A    07393+0514  0.40  V  37279  61421 114.825493   5.224993 2016-06-30 
 Propus            Propus            HR 2216      eta   η     Gem A    06149+2230  3.32  V  29655  42995  93.719405  22.506794 2016-07-20 
-Proxima Centauri  Proxima Centauri  GJ 551       alf   α     Cen C    14396-6050 11.01  V  70890 999999 217.428953 -62.679484 2016-08-21 *
+Proxima Centauri  Proxima Centauri  GJ 551       alf   α     Cen C    14396-6050 11.01  V  70890 999999 217.428953 -62.679484 2016-08-21 * 
 Ran               Ran               HR 1084      eps   ε     Eri _    03329-0927  3.73  V  16537  22049  53.232687  -9.458259 2015-12-15 
+Rana              Rana              HR 1136      del   δ     Eri _    _           3.53  V  17378  23249  55.812086  -9.763392 2022-04-04 
 Rapeto            Rapeto            HD 153950    _     _     Sco _    _           7.39  V  83547 153950 256.128629 -43.309770 2019-12-17 
 Rasalas           Rasalas           HR 3905      mu    μ     Leo _    _           3.88  V  48455  85503 148.190903  26.006953 2016-09-12 
 Rasalgethi        Rasalgethi        HR 6406      alf01 α1    Her Aa   17146+1423  3.37  V  84345 156014 258.661910  14.390333 2016-06-30 
@@ -364,7 +360,7 @@ Rastaban          Rastaban          HR 6536      bet   β     Dra A    17304+521
 Regulus           Regulus           HR 3982      alf   α     Leo A    10084+1158  1.36  V  49669  87901 152.092962  11.967209 2016-06-30 
 Revati            Revati            HR 361       zet   ζ     Psc A    01137+0735  5.21  V   5737   7344  18.432864   7.575354 2017-06-30 
 Rigel             Rigel             HR 1713      bet   β     Ori A    05145-0812  0.18  V  24436  34085  78.634467  -8.201638 2016-06-30 
-Rigil Kentaurus   Rigil Kentaurus   HR 5459      alf   α     Cen A    14396-6050 -0.01  V  71683 128620 219.902066 -60.833975 2016-11-06 *
+Rigil Kentaurus   Rigil Kentaurus   HR 5459      alf   α     Cen A    14396-6050 -0.01  V  71683 128620 219.902066 -60.833975 2016-11-06 * 
 Rosaliadecastro   Rosalíadecastro   HD 149143    _     _     Oph _    _           7.89  V  81022 149143 248.212712   2.084828 2019-12-17 
 Rotanev           Rotanev           HR 7882      bet   β     Del A    20375+1436  3.64  V 101769 196524 309.387235  14.595115 2016-09-12 
 Ruchbah           Ruchbah           HR 403       del   δ     Cas Aa   01258+6014  2.66  V   6686   8538  21.453964  60.235284 2016-08-21 
@@ -433,7 +429,7 @@ Timir             Timir             HD 148427    _     _     Oph _    _         
 Tislit            Tislit            WASP-161     _     _     Pup _    _          10.77  V      _      _ 126.337846 -11.500986 2019-12-17 
 Titawin           Titawin           HR 458       ups   υ     And A    01368+4124  4.09  V   7513   9826  24.199342  41.405457 2015-12-15 
 Tojil             Tojil             WASP-22      _     _     Eri _    03313-2349 11.58  G      _      _ 052.818029 -23.819678 2019-12-17 
-Toliman           Toliman           HR 5460      alf   α     Cen B    14396-6050  1.35  V  71681 128621 219.896096 -60.837528 2018-08-10 *
+Toliman           Toliman           HR 5460      alf   α     Cen B    14396-6050  1.35  V  71681 128621 219.896096 -60.837528 2018-08-10 * 
 Tonatiuh          Tonatiuh          HR 4609      _     _     Cam _    _           5.80  V  58952 104985 181.312995  76.905735 2015-12-15 
 Torcular          Torcular          HR 510       omi   ο     Psc A    01454+0909  4.29  V   8198  10761  26.348466   9.157737 2017-09-05 
 Tuiren            Tuiren            HAT-P-36     _     _     CVn _    _          12.09  G      _      _ 188.266276  44.915333 2019-12-17 
@@ -443,7 +439,6 @@ Tureis            Tureis            HR 3185      rho   ρ     Pup A    08075-241
 Ukdah             Ukdah             HR 3845      iot   ι     Hya _    _           3.90  V  47431  83618 144.964008  -1.142810 2018-06-01 
 Uklun             Uklun             HD 102117    _     _     Cen _    _           7.47  V  57291 102117 176.210254 -58.703710 2019-12-17 
 Unukalhai         Unukalhai         HR 5854      alf   α     Ser _    15443+0626  2.63  V  77070 140573 236.066976   6.425629 2016-08-21 
-Unurgunite        Unurgunite        HR 2646      sig   σ     CMa _    07017-2756  3.49  V  33856  52877 105.429782 -27.934830 2017-09-05 
 Uruk              Uruk              HD 231701    _     _     Sge _    _           8.97  V  96078 231701 293.017338  16.474289 2019-12-17 
 Vega              Vega              HR 7001      alf   α     Lyr _    18369+3846  0.03  V  91262 172167 279.234735  38.783689 2016-06-30 
 Veritate          Veritate          HR 8930      14    14    And A    23313+3914  5.22  V 116076 221345 352.822556  39.236197 2015-12-15 
@@ -452,7 +447,7 @@ Wasat             Wasat             HR 2777      del   δ     Gem Aa   07201+215
 Wazn              Wazn              HR 2040      bet   β     Col _    05510-3546  3.12  V  27628  39425  87.739968 -35.768310 2016-07-20 
 Wezen             Wezen             HR 2693      del   δ     CMa Aa   07084-2624  1.83  V  34444  54605 107.097850 -26.393200 2016-07-20 
 Wurren            Wurren            HR 338       zet   ζ     Phe Aa   01084-5515  4.02  V   5348   6882  17.096173 -55.245758 2017-11-17 
-Xamidimura        Xamidimura        HR 6247      mu01  μ1    Sco Aa   16519-3803  3.00  V  82514 151890 252.967630 -38.047380 2017-09-05 *
+Xamidimura        Xamidimura        HR 6247      mu01  μ1    Sco Aa   16519-3803  3.00  V  82514 151890 252.967630 -38.047380 2017-09-05 * 
 Xihe              Xihe              HD 173416    _     _     Lyr _    _           6.04  V  91852 173416 280.900456  36.556606 2019-12-17 
 Xuange            Xuange            HR 5351      lam   λ     Boo _    14164+4605  4.18  V  69732 125162 214.095912  46.088306 2017-06-30 
 Yed Posterior     Yed Posterior     HR 6075      eps   ε     Oph _    16183-0442  3.23  V  79882 146791 244.580374  -4.692510 2016-10-05 
@@ -467,7 +462,7 @@ Zosma             Zosma             HR 4357      del   δ     Leo _    11141+203
 Zubenelgenubi     Zubenelgenubi     HR 5531      alf02 α2    Lib Aa   14509-1603  2.75  V  72622 130841 222.719638 -16.041777 2016-08-21 
 Zubenelhakrabi    Zubenelhakrabi    HR 5787      gam   γ     Lib A    15355-1447  3.91  V  76333 138905 233.881578 -14.789536 2017-09-05 
 Zubeneschamali    Zubeneschamali    HR 5685      bet   β     Lib _    _           2.61  V  74785 135742 229.251724  -9.382914 2016-08-21 
-#Name/ASCII       Name/Diacritics   Designation  ID    ID    Con #    WDS_J       mag  bnd  HIP     HD  RA(J2000)  Dec(J2000) Date       Notes
+#Name/ASCII       Name/Diacritics   Designation  ID    ID    Con #    WDS_J       mag  bnd  HIP     HD  RA(J2000)  Dec(J2000) Date       Notes 
 #(1)              (2)               (3)          (4)   (5)   (6) (7)  (8)         (9)  (10) (11)   (12) (13)       (14)       (15)       (16)
 #
 # Notes:
@@ -530,7 +525,6 @@ Zubeneschamali    Zubeneschamali    HR 5685      bet   β     Lib _    _        
 #      campaign, and the winning entries were reviewed and adopted by
 #      the IAU100 NameExoWorlds Steering Committee (which had
 #      representatives from WGSN).
-#
 # (16) Notes: 
 #      * Acamar is tet01 Eri = tet Eri A = WDS J02583-4018A.
 #      * Algieba is gam01 Leo = gam Leo A = WDS J10200+1950A.
@@ -585,5 +579,15 @@ Zubeneschamali    Zubeneschamali    HR 5685      bet   β     Lib _    _        
 #             name-designation assignments have been checked again
 #             with: http://www.nameexoworlds.iau.org/final-results.
 #             If you used the 2020-02-13 or 2020-03-01 versions,
-#             please update to this latest version. Thanks to Eduardo
-#             Penteado for pointing out the errors.
+#             please update to this latest version. Thank you to
+#             Eduardo Penteado for pointing out the errors.
+# 2021-04-04: Fixed accented version "Chaso" to "Chasoň" for HAT-P-5.
+#             Clarification for HD 149143: The star name is spelled
+#             "Rosalíadecastro" and the exoplanet b is "Ríosar". The
+#             accents were accidently omitted in the IAU100 NameExoWorlds
+#             announcement materials.
+# 2022-04-04: Added "Geminga" and "Rana". See Annual Report WGSN 2021:
+#             https://www.iau.org/static/science/scientific_bodies/working_groups/280/wg-starnames-annual-report-2021-2022.pdf
+
+
+
