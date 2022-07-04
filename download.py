@@ -116,7 +116,7 @@ for a in raw_lines:
         # if it is an empty line, append an empty line
         normalized_lines.append('')
         continue  # go to next line
-    if a[0] == '#':
+    if a[0] == '#' or a[0]== '$':
         # if the first character is a '#', it is a comment - keep the line intact except for the blank spaces at the end and line termination
         normalized_lines.append(a.strip('\r\n\t '))
         continue  # go to next line
@@ -170,7 +170,7 @@ print('Recording csv catalog with tab separator...')
 open('catalog_data/IAU-CSN.tsv', 'w', newline='\n').write(csv_text)
 
 print('Recording json catalog...')
-open('catalog_data/IAU-CSN.json', 'w', newline='\n').write(json.dumps(json_data, indent=2))
+open('catalog_data/IAU-CSN.json', 'w', newline='\n').write(json.dumps(json_data, indent=2, ensure_ascii=False))
 print('done.')
 
 if not_downloaded:
