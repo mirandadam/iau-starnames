@@ -23,6 +23,11 @@ The update on 2017-11-19:
 The update on 2018-10-11:
  *adds a new ID column with the utf-8 greek letter symbolic identifier
  *adds Gudja, Guniibuu, Imai, La Superba, Paikauhale, Toliman
+The update on 2022-07-05:
+ *adds validation for TrES and BD star designators
+ *accepts bayer designations with Ab-z, not only α-ω.
+ *accepts the latin Y in designations, which should not be an allowed Bayer designation, but is used on HR 4846 (La Superba) in several sources.
+ *accepts an empty ("_") band for magnitude. Used in PSR B1257+12 (Lich).
 '''
 
 import os
@@ -82,14 +87,14 @@ else:
 columns = [
     ['Name/ASCII', [1, 17], 'left', re.compile('[A-Z][a-z\']+( [A-Z][a-z]+)?').fullmatch],
     ['Name/Diacritics', [19, 35], 'left', re.compile('.*').fullmatch],
-    ['Designation', [37, 48], 'left', re.compile('((HR |HD |GJ |WASP-|HAT-P-|XO-|HIP )[0-9]{1,6}|PSR .+)').fullmatch],
+    ['Designation', [37, 48], 'left', re.compile('((HR |HD |GJ |WASP-|HAT-P-|XO-|HIP |TrES-|BD[+-][0-9]{1,2} )[0-9]{1,6}|PSR .+)').fullmatch],
     ['ID', [50, 54], 'left', re.compile('([A-Za-z]{0,3}[0-9]{0,4}|_)').fullmatch],
-    ['ID/Diacritics', [56, 60], 'left', re.compile('(V[0-9]+|[α-ω]{0,3}[0-9]{0,4}|_)').fullmatch],
+    ['ID/Diacritics', [56, 60], 'left', re.compile('(V[0-9]+|[α-ωb-zAY]{0,3}[0-9]{0,4}|_)').fullmatch],
     ['Con', [62, 64], 'left', re.compile('(_|[A-Z][A-Za-z]{2})').fullmatch],
     ['#', [66, 69], 'left', re.compile('(_|A|Aa|Aa1|C|Ca|B)').fullmatch],
     ['WDS_J', [71, 80], 'left', re.compile('(_|([0-9]{5}[-+][0-9]{4}))').fullmatch],
     ['mag', [82, 86], 'right', lambda x: x == '_' or (float(x) > -2 and float(x) < 13)],
-    ['bnd', [88, 89], 'right', re.compile('[G|V]').fullmatch],
+    ['bnd', [88, 89], 'right', re.compile('[G|V|_]').fullmatch],
     ['HIP', [91, 96], 'right', re.compile('([0-9]{1,6}|_)').fullmatch],
     ['HD', [98, 103], 'right', re.compile('([0-9]{1,6}|_)').fullmatch],
     ['RA(J2000)', [105, 114], 'right', lambda x: float(x) >= 0 and float(x) <= 360],
