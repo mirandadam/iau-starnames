@@ -118,6 +118,8 @@ for a in raw_lines:
         continue  # go to next line
     if a[0] == '#' or a[0]== '$':
         # if the first character is a '#', it is a comment - keep the line intact except for the blank spaces at the end and line termination
+        # $ as the beginning of a line is probably a typo
+        a = '#' + a[1:]
         normalized_lines.append(a.strip('\r\n\t '))
         continue  # go to next line
     # we split the values in the space boundaries:

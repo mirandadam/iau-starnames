@@ -4,7 +4,7 @@
 # Last updated 2022-04-04 (see notes on latest edits at end of file)
 #
 # For use of the contents of the data of this file, we encourage users to cite the official IAU version of the data at:
-$ https://www.iau.org/public/themes/naming_stars/. At times there may be a time delay between the posting of names in this file and what
+# https://www.iau.org/public/themes/naming_stars/. At times there may be a time delay between the posting of names in this file and what
 # is posted on the IAU website. All IAU-produced products (Images, Videos, Texts) are released under Creative Commons Attribution
 # (i.e. free to use in all perpetuity, world-wide, as long as the source is mentioned). Rows (2) and (5) require UTF-8 encoding
 # (For Firefox browser, set > View > Repair Text Encoding).  WGSN is working to add brief summaries of etymological information
