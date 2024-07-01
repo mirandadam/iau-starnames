@@ -1,4 +1,5 @@
 # *iau-starnames*
+
 This code will download and parse official star names published by the IAU Working Group on Star Names (WGSN) from [IAU-CSN](http://www.pas.rochester.edu/~emamajek/WGSN/IAU-CSN.txt)
 
 I am not affiliated with nor endorsed by the IAU. This work is part of my master's dissertation experiments with star trackers.
@@ -12,6 +13,7 @@ To update the catalog, **remove catalog_data/IAU-CSN.txt** and run download.py (
 download.py will produce a warning and will not download a newer IAU-CSN.txt file if the old one is present.
 
 The following files will be rebuilt:
+
 * [catalog_data/IAU-CSN.txt](catalog_data/IAU-CSN.txt) will be downloaded from [IAU-CSN](http://www.pas.rochester.edu/~emamajek/WGSN/IAU-CSN.txt)
 * [catalog_data/IAU-CSN.json](catalog_data/IAU-CSN.json) is the parsed version of the catalog in json format.
 * [catalog_data/IAU-CSN.csv](catalog_data/IAU-CSN.csv) is the parsed version of the catalog in a tab separated format (TSV). The CSV extension is used for compatibility.
@@ -19,10 +21,9 @@ The following files will be rebuilt:
 
 The IAU-CSN.txt original file is mirrored in this repository to keep a version history.
 
-
 ## *Catalog description*
 
-The Catalog of Star Names (IAU-CSN) is produced by the [IAU Working Group on Star Names](https://www.iau.org/science/scientific_bodies/working_groups/280/). It is published [online](https://www.iau.org/public/themes/naming_stars/) as bulletins and as a plain text file which can be downloaded at http://www.pas.rochester.edu/~emamajek/WGSN/IAU-CSN.txt.
+The Catalog of Star Names (IAU-CSN) is produced by the [IAU Working Group on Star Names](https://www.iau.org/science/scientific_bodies/working_groups/280/). It is published [online](https://www.iau.org/public/themes/naming_stars/) as bulletins and as a plain text file which can be downloaded at <http://www.pas.rochester.edu/~emamajek/WGSN/IAU-CSN.txt>.
 
 ### *Catalog Preamble*
 
@@ -50,15 +51,17 @@ The BD is supplemented by the Cordoba Durchmusterung (CD) and the Cape Durchmust
 For the wikipedia list of prefixes, see [here](https://en.wikipedia.org/wiki/Star_catalogue)
 
 ## *Updates*
+
 The IAU_CSN.txt data file in this repository was last synced with the IAU on 2022-07-04.
 
 The IAU_CSN_normalized.txt file is intended to make machine parsing easier. Ideally this should be the same as the original file, but there have been points in time in which the original file contained alignment errors.
+
 * As of 2017-10-28, the IAU file format has changed, and the only difference to the normalized version is the fixing of the entry for Miaplacidus.
 * As of 2017-10-31, Miaplacidus entry was fixed. There is no difference between the normalized and the original versions.
 * As of 2017-11-28, the differences between the normalized file and the original are limited to blank spaces.
 * As of 2018-08-30, 4 star records were updated and 15 more have been added. Polaris Australis HR 7228 had the '-' fields replaced with '\_' for some reason. Normalization will replace every '\_' with '-'.
 * As of 2018-10-11, a greek letter identifier column has been added and 6 star records have been added. More '\_' occurrences that have been all replaced with '-'.
-* As of 2020-10-26 two columns were added: the "bnd", "Name/Diacritics"; "Name" was renamed to "Name/ASCII", "Vmag" was renamed to mag, and "Approved" was renamed to "Date". The second "ID" column is called "ID/Diacritics" in this code now. I have changed the way "_"s are treated - it is actually a better character than "-" to denote an empty data field. I believe the IAU catalog has two minor errors at this time: Elgafar star greek id uses a captial greek letter "phi" instead of a lowercase one and Mebsuta star is missing a "_" in column 7.
+* As of 2020-10-26 two columns were added: the "bnd", "Name/Diacritics"; "Name" was renamed to "Name/ASCII", "Vmag" was renamed to mag, and "Approved" was renamed to "Date". The second "ID" column is called "ID/Diacritics" in this code now. I have changed the way "*"s are treated - it is actually a better character than "-" to denote an empty data field. I believe the IAU catalog has two minor errors at this time: Elgafar star greek id uses a captial greek letter "phi" instead of a lowercase one and Mebsuta star is missing a "*" in column 7.
 * As of 2022-07-04, 2 records added, 3 records updated. One of the updates was the renaming of Unurgunite to Nganurganity. A "$" (probably a typo) was introduced in the header. I have also changed the escaped unicode to plain unicode in the .json output.
 * As of 2024-07-01, there are no changes on the original file, however this code was changed to better deal with some unicode inconsistencies and a fallback method to deal with failed field validations was added. IAU-CSN_normalized.txt and the other generated files now reflect the changes.
 
@@ -79,6 +82,7 @@ The IAU_CSN_normalized.txt file is intended to make machine parsing easier. Idea
 * [Washington Visual Double Star Catalog](http://cdsarc.u-strasbg.fr/viz-bin/Cat?B/wds), direct [USNO link](http://www.usno.navy.mil/USNO/astrometry/optical-IR-prod/wds/WDS) (constantly updated, more than 140000 entries)
 
 ## *License*
+
 This code is released under the MIT license.
 
 The catalog mirrored in this repository is distributed by the IAU under the Creative Commons Attribution (i.e. free to use in all perpetuity, world-wide, as long as the source is mentioned). Direct link: [IAU-CSN](http://www.pas.rochester.edu/~emamajek/WGSN/IAU-CSN.txt)
