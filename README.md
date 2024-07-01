@@ -1,88 +1,118 @@
-# *iau-starnames*
+# IAU Star Names Catalog Processor
 
-This code will download and parse official star names published by the IAU Working Group on Star Names (WGSN) from [IAU-CSN](http://www.pas.rochester.edu/~emamajek/WGSN/IAU-CSN.txt)
+This project downloads, processes, and formats the official star names published by the IAU Working Group on Star Names (WGSN).
 
 I am not affiliated with nor endorsed by the IAU. This work is part of my master's dissertation experiments with star trackers.
 
-**The IAU Catalog of Star Names is not a "full" star catalog**, it's intent is to list the official names for the stars it contains and uniquely identify those stars. For more complete catalogs, try the full [Hipparcos catalogue](http://cdsarc.u-strasbg.fr/viz-bin/Cat?I/311) (117955 stars, complete to magnitude 7.3[reference needed], does not have star names) or the smaller [Bright Star Catalogue](http://cdsarc.u-strasbg.fr/viz-bin/Cat?V/50) (9110 stars, complete to magnitude 6.5[reference needed], has star names). If you need a larger dataset, the [Gaia Mission](https://www.cosmos.esa.int/web/gaia/home) has published the [Gaia Data Release 2](https://www.cosmos.esa.int/web/gaia/dr2) downloadable [here](http://cdsarc.u-strasbg.fr/viz-bin/cat?I/345) with 1,692,919,135 light sources, and features the distance and motion parameters of more than 1 billion stars. Update: [Gaia Data Release 3](https://www.cosmos.esa.int/web/gaia/data-release-3) is now available.
+## Purpose
 
-## *How to use*
+The main goal is to provide easy-to-use versions of the IAU Catalog of Star Names (CSN) in various formats, including JSON and TSV.
 
-To update the catalog, **remove catalog_data/IAU-CSN.txt** and run download.py (python 3 is required). This will download the latest catalog_data/IAU-CSN.txt file from the IAU and rebuild the other files in the folder.
+## How to Use
 
-download.py will produce a warning and will not download a newer IAU-CSN.txt file if the old one is present.
+1. Ensure you have Python 3 installed.
+2. To update the catalog:
+   a. Delete the file `catalog_data/IAU-CSN.txt` if it exists.
+   b. Run `python3 download.py`.
+3. The script will download the latest catalog and generate the following files in the `catalog_data` folder:
+   - `IAU-CSN.txt`: Original downloaded file
+   - `IAU-CSN.json`: Parsed version in JSON format
+   - `IAU-CSN.tsv`: Parsed version in tab-separated format
+   - `IAU-CSN_normalized.txt`: Cleaned and aligned version of the original file
 
-The following files will be rebuilt:
+Note: If `IAU-CSN.txt` already exists, the script will use it instead of downloading a new one.
 
-* [catalog_data/IAU-CSN.txt](catalog_data/IAU-CSN.txt) will be downloaded from [IAU-CSN](http://www.pas.rochester.edu/~emamajek/WGSN/IAU-CSN.txt)
-* [catalog_data/IAU-CSN.json](catalog_data/IAU-CSN.json) is the parsed version of the catalog in json format.
-* [catalog_data/IAU-CSN.csv](catalog_data/IAU-CSN.csv) is the parsed version of the catalog in a tab separated format (TSV). The CSV extension is used for compatibility.
-* [catalog_data/IAU-CSN_normalized.txt](catalog_data/IAU-CSN_normalized.txt) is a cleaner, aligned version of the original file.
+## Catalog Description
 
-The IAU-CSN.txt original file is mirrored in this repository to keep a version history.
+The IAU Catalog of Star Names (IAU-CSN) is produced by the [IAU Working Group on Star Names](https://www.iau.org/science/scientific_bodies/working_groups/280/). It's important to note that this is not a comprehensive star catalog, but rather a list of officially named stars.
 
-## *Catalog description*
+### File Format
 
-The Catalog of Star Names (IAU-CSN) is produced by the [IAU Working Group on Star Names](https://www.iau.org/science/scientific_bodies/working_groups/280/). It is published [online](https://www.iau.org/public/themes/naming_stars/) as bulletins and as a plain text file which can be downloaded at <http://www.pas.rochester.edu/~emamajek/WGSN/IAU-CSN.txt>.
+The original `IAU-CSN.txt` file contains:
 
-### *Catalog Preamble*
+- A preamble explaining the contents
+- Fixed-width columns with attributes such as Name, Designation, RA(J2000), Dec(J2000), etc.
+- For full details, refer to the preamble in the file itself.
 
-The [text file](catalog_data/IAU-CSN.txt) contains a preamble explaining it's contents and displays fixed-width columns with the attributes: Name, Designation, RA(J2000), Dec(J2000), Vmag, ID, Con, #, WDS_J, HIP#, HD# and Approved. See the preamble for further information.
+### Identifier Prefixes
 
-### *Identifier prefixes*
+The catalog uses various identifier prefixes, including:
 
-Used in the IAU-CSN:
+- HR: Bright Star Catalogue
+- HIP: Hipparcos catalogue
+- HD: Henry Draper Catalogue
+- GJ, GL, WO: Gliese Catalogue of Nearby Stars
+- PSR: Pulsating Source of Radio (Pulsar)
+- WDS_J: The Washington Double Star Catalog
 
-* HR - [Bright Star Catalogue (Harvard Revised Photometry)](https://en.wikipedia.org/wiki/Bright_Star_Catalogue)
-* HIP - [Hipparcos catalogue](https://en.wikipedia.org/wiki/Hipparcos)
-* HD - [Henry Draper Catalogue](https://en.wikipedia.org/wiki/Henry_Draper_Catalogue)
-* GJ, GL, WO - [Gliese Catalogue of Nearby Stars](https://en.wikipedia.org/wiki/Gliese_Catalogue_of_Nearby_Stars)
-* PSR - [Pulsating Source of Radio](https://en.wikipedia.org/wiki/PSR_B1257%2B12) - Pulsar
-* WDS_J - [The Washington Double Star Catalog](http://www.usno.navy.mil/USNO/astrometry/optical-IR-prod/wds/WDS)
+For a more comprehensive list of star catalog prefixes, see [Wikipedia's list](https://en.wikipedia.org/wiki/Star_catalogue).
 
-Other catalogs:
+## Update History
 
-* BD - [Bonner Durchmusterung](https://en.wikipedia.org/wiki/Durchmusterung)
-The BD is supplemented by the Cordoba Durchmusterung (CD) and the Cape Durchmusterung for stars in the southern hemisphere.
-* GC - [General Catalogue of Boss](https://en.wikipedia.org/wiki/Boss_General_Catalogue)
-* SAO - [Smithsonian Astrophysical Observatory Catalogue](https://en.wikipedia.org/wiki/Smithsonian_Astrophysical_Observatory_Star_Catalog)
-* PPM - [Positions and Proper Motions Catalogue](https://en.wikipedia.org/wiki/PPM_Star_Catalogue)
+The IAU_CSN.txt data file in this repository was last synced with the IAU on 2022-07-04. The IAU_CSN_normalized.txt file is intended to make machine parsing easier. Ideally, this should be the same as the original file, but there have been instances where the original file contained alignment errors.
 
-For the wikipedia list of prefixes, see [here](https://en.wikipedia.org/wiki/Star_catalogue)
+### 2024-07-01
 
-## *Updates*
+- No changes to the original file
+- Code updated to handle unicode inconsistencies
+- Added fallback method for failed field validations
+- IAU-CSN_normalized.txt and other generated files now reflect these changes
 
-The IAU_CSN.txt data file in this repository was last synced with the IAU on 2022-07-04.
+### 2022-07-04
 
-The IAU_CSN_normalized.txt file is intended to make machine parsing easier. Ideally this should be the same as the original file, but there have been points in time in which the original file contained alignment errors.
+- 2 records added, 3 records updated
+- Unurgunite renamed to Nganurganity
+- "$" (likely a typo) introduced in the header
+- Changed escaped unicode to plain unicode in .json output
 
-* As of 2017-10-28, the IAU file format has changed, and the only difference to the normalized version is the fixing of the entry for Miaplacidus.
-* As of 2017-10-31, Miaplacidus entry was fixed. There is no difference between the normalized and the original versions.
-* As of 2017-11-28, the differences between the normalized file and the original are limited to blank spaces.
-* As of 2018-08-30, 4 star records were updated and 15 more have been added. Polaris Australis HR 7228 had the '-' fields replaced with '\_' for some reason. Normalization will replace every '\_' with '-'.
-* As of 2018-10-11, a greek letter identifier column has been added and 6 star records have been added. More '\_' occurrences that have been all replaced with '-'.
-* As of 2020-10-26 two columns were added: the "bnd", "Name/Diacritics"; "Name" was renamed to "Name/ASCII", "Vmag" was renamed to mag, and "Approved" was renamed to "Date". The second "ID" column is called "ID/Diacritics" in this code now. I have changed the way "*"s are treated - it is actually a better character than "-" to denote an empty data field. I believe the IAU catalog has two minor errors at this time: Elgafar star greek id uses a captial greek letter "phi" instead of a lowercase one and Mebsuta star is missing a "*" in column 7.
-* As of 2022-07-04, 2 records added, 3 records updated. One of the updates was the renaming of Unurgunite to Nganurganity. A "$" (probably a typo) was introduced in the header. I have also changed the escaped unicode to plain unicode in the .json output.
-* As of 2024-07-01, there are no changes on the original file, however this code was changed to better deal with some unicode inconsistencies and a fallback method to deal with failed field validations was added. IAU-CSN_normalized.txt and the other generated files now reflect the changes.
+### 2020-10-26
 
-## *Resources*
+- Added two columns: "bnd" and "Name/Diacritics"
+- Renamed "Name" to "Name/ASCII", "Vmag" to "mag", and "Approved" to "Date"
+- Second "ID" column now called "ID/Diacritics"
+- Changed treatment of "*" characters (now preferred over "-" for empty fields)
+- Noted potential errors: Elgafar star greek id uses capital "phi", Mebsuta star missing "*" in column 7
 
-* [Online IAU Catalog of Star Names](https://www.iau.org/public/themes/naming_stars/) with historical context on how stars are named.
+### 2018-10-11
 
-* Latest plain text catalog: [IAU-CSN](http://www.pas.rochester.edu/~emamajek/WGSN/IAU-CSN.txt)
+- Added greek letter identifier column
+- 6 star records added
+- Replaced more '_' occurrences with '-'
 
-* [IAU Working Group on Star Names Website](https://www.iau.org/science/scientific_bodies/working_groups/280/).
+### 2018-08-30
 
-* [Hipparcos catalogue](http://cdsarc.u-strasbg.fr/viz-bin/Cat?I/311) (117955 stars, does not have star names)
+- 4 star records updated, 15 new records added
+- Polaris Australis HR 7228: '-' fields replaced with '_'
+- Normalization now replaces every '_' with '-'
 
-* [Bright Star Catalogue](http://cdsarc.u-strasbg.fr/viz-bin/Cat?V/50) (9110 stars, has star names)
+### 2017-11-28
 
-* [Gaia Data Release 2](https://www.cosmos.esa.int/web/gaia/dr2) (1,692,919,135 light sources)
+- Differences between normalized and original files limited to blank spaces
 
-* [Washington Visual Double Star Catalog](http://cdsarc.u-strasbg.fr/viz-bin/Cat?B/wds), direct [USNO link](http://www.usno.navy.mil/USNO/astrometry/optical-IR-prod/wds/WDS) (constantly updated, more than 140000 entries)
+### 2017-10-31
 
-## *License*
+- Miaplacidus entry fixed in original catalog
+- No differences between normalized and original versions
+
+### 2017-10-28
+
+- IAU file format changed
+- Only difference in normalized version: fixed entry for Miaplacidus
+
+## Resources
+
+- [IAU Catalog of Star Names (Online)](https://www.iau.org/public/themes/naming_stars/): Includes historical context on star naming.
+- [IAU-CSN (Text File)](http://www.pas.rochester.edu/~emamajek/WGSN/IAU-CSN.txt): Latest plain text catalog.
+- [IAU Working Group on Star Names](https://www.iau.org/science/scientific_bodies/working_groups/280/): Official working group website.
+- [Hipparcos Catalogue](http://cdsarc.u-strasbg.fr/viz-bin/Cat?I/311): 117,955 stars, no star names.
+- [Bright Star Catalogue](http://cdsarc.u-strasbg.fr/viz-bin/Cat?V/50): 9,110 stars, includes star names.
+- [Gaia Data Release 2](https://www.cosmos.esa.int/web/gaia/dr2): 1,692,919,135 light sources.
+- [Washington Visual Double Star Catalog](http://www.usno.navy.mil/USNO/astrometry/optical-IR-prod/wds/WDS): Constantly updated, over 140,000 entries.
+
+## License
 
 This code is released under the MIT license.
 
-The catalog mirrored in this repository is distributed by the IAU under the Creative Commons Attribution (i.e. free to use in all perpetuity, world-wide, as long as the source is mentioned). Direct link: [IAU-CSN](http://www.pas.rochester.edu/~emamajek/WGSN/IAU-CSN.txt)
+The IAU Catalog of Star Names is distributed under the Creative Commons Attribution license. Users are free to use it worldwide, in perpetuity, as long as the source is mentioned.
+
+For the official catalog, please refer to: [IAU-CSN](http://www.pas.rochester.edu/~emamajek/WGSN/IAU-CSN.txt)
