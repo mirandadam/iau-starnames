@@ -70,8 +70,9 @@ if not os.path.exists("catalog_data"):
     os.makedirs("catalog_data")
 
 not_downloaded = False
-if os.path.exists("catalog_data/IAU-CSN.txt"):  # debug
-    print('"catalog_data/IAU-CSN.txt" already exists. NOT downloading.')
+catalog_local_copy = "catalog_data/IAU-CSN.txt"
+if os.path.exists(catalog_local_copy):  # debug
+    print(f"{catalog_local_copy} already exists. NOT downloading.")
     print("Generating TXT, JSON, and CSV files with old IAU-CSN.txt.")
     print(
         "Delete the file and run this script again to download the current version from the IAU."
@@ -88,7 +89,7 @@ else:
         )
     request.urlretrieve(
         "http://www.pas.rochester.edu/~emamajek/WGSN/IAU-CSN.txt",
-        "catalog_data/IAU-CSN.txt",
+        catalog_local_copy,
     )
 
 # columns - description, [start col, end col], alignment, validator
@@ -105,30 +106,30 @@ columns = [
         [37, 48],
         "left",
         re.compile(
-            "((HR |HD |GJ |WASP-|HAT-P-|XO-|HIP |TrES-|BD[+-][0-9]{1,2} )[0-9]{1,6}|PSR .+)"
+            "((HR |HD |GJ |WASP-|HAT-P-|XO-|HIP |TrES-|BD[+-]\d{1,2} )\d{1,6}|PSR .+)"
         ).fullmatch,
     ],
-    ["ID", [50, 54], "left", re.compile("([A-Za-z]{0,3}[0-9]{0,4}|_)").fullmatch],
+    ["ID", [50, 54], "left", re.compile("([A-Za-z]{0,3}\d{0,4}|_)").fullmatch],
     [
         "ID/Diacritics",
         [56, 60],
         "left",
-        re.compile("(V[0-9]+|[α-ωb-zAY]{0,3}[0-9]{0,4}|_)").fullmatch,
+        re.compile("(V\d+|[α-ωb-zAY]{0,3}\d{0,4}|_)").fullmatch,
     ],
     ["Con", [62, 64], "left", re.compile("(_|[A-Z][A-Za-z]{2})").fullmatch],
     ["#", [66, 69], "left", re.compile("(_|A|Aa|Aa1|C|Ca|B)").fullmatch],
-    ["WDS_J", [71, 80], "left", re.compile("(_|([0-9]{5}[-+][0-9]{4}))").fullmatch],
+    ["WDS_J", [71, 80], "left", re.compile("(_|(\d{5}[-+]\d{4}))").fullmatch],
     ["mag", [82, 86], "right", lambda x: x == "_" or (float(x) > -2 and float(x) < 13)],
-    ["bnd", [88, 89], "right", re.compile("[G|V|_]").fullmatch],
-    ["HIP", [91, 96], "right", re.compile("([0-9]{1,6}|_)").fullmatch],
-    ["HD", [98, 103], "right", re.compile("([0-9]{1,6}|_)").fullmatch],
+    ["bnd", [88, 89], "right", re.compile("[GV_]").fullmatch],
+    ["HIP", [91, 96], "right", re.compile("(\d{1,6}|_)").fullmatch],
+    ["HD", [98, 103], "right", re.compile("(\d{1,6}|_)").fullmatch],
     ["RA(J2000)", [105, 114], "right", lambda x: float(x) >= 0 and float(x) <= 360],
     ["Dec(J2000)", [116, 125], "right", lambda x: float(x) >= -90 and float(x) <= 90],
     [
         "Date",
         [127, 136],
         "right",
-        re.compile("20[12][0-9]-(1[0-2]|0[1-9])-(3[01]|[12][0-9]|0[1-9])").fullmatch,
+        re.compile("20[12]\d-(1[0-2]|0[1-9])-(3[01]|[12]\d|0[1-9])").fullmatch,
     ],
     ["notes", [138, 138], "right", re.compile("[*@]?").fullmatch],
 ]
@@ -143,7 +144,7 @@ for i in range(len(columns) - 1):
     assert columns[i + 1][1][0] - columns[i][1][1] == 2
 
 # parse the results
-raw_lines = open("catalog_data/IAU-CSN.txt", "r").readlines()
+raw_lines = open(catalog_local_copy, "r").readlines()
 json_data = []
 normalized_lines = []
 csv_lines = []
@@ -210,7 +211,7 @@ diffs = list(
     difflib.context_diff(
         a,
         b,
-        fromfile="catalog_data/IAU-CSN.txt",
+        fromfile=catalog_local_copy,
         tofile="catalog_data/IAU-CSN_normalized.txt",
         n=0,
     )
@@ -236,7 +237,7 @@ open("catalog_data/IAU-CSN.json", "w", newline="\n").write(
 print("done.")
 
 if not_downloaded:
-    print('"catalog_data/IAU-CSN.txt" already existed. NOT downloaded.')
+    print(f"{catalog_local_copy} already existed. NOT downloaded.")
     print("TXT, JSON, and CSV files generated with old IAU-CSN.txt.")
     print(
         "Delete catalog_data/IAU-CSN.txt and run this script again to download the current version from the IAU."
