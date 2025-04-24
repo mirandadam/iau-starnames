@@ -27,11 +27,6 @@ Note:
   If IAU-CSN.txt already exists locally, the script will use that file instead of
   downloading a new one. Delete the local file to force a new download.
 
-Version History:
-  2024-07-01: Added preprocessors for validation failures, unicode corrections,
-              code formatting with Ruff, and other minor improvements.
-  [Add previous version history here]
-
 Dependencies:
   This script uses only Python standard library modules.
 
@@ -61,6 +56,8 @@ The update on 2024-07-01:
  *The normalized txt file now reflects the unicode correction and the empty field correction.
  *Replaces [0-9] with \d on regular expressions to silence linter warnings.
  *Uses "Ruff" to format the code.
+The update on 2025-04-24:
+ *Fixes a minor typo on the regular expressions. No changes to the data.
 """
 
 import os
@@ -122,22 +119,22 @@ def empty_to_underscore_preprocess(value):
 # description, [start col, end col], alignment, validator, preprocessor
 # fmt:off
 columns = [
-    ["Name/ASCII", [1, 17], "left", re.compile("[A-Z][a-z']+( [A-Z][a-z]+)?").fullmatch, dummy_preprocess],
-    ["Name/Diacritics", [19, 35], "left", re.compile(".*").fullmatch, dummy_preprocess],
-    ["Designation", [37, 48], "left", re.compile("((HR |HD |GJ |WASP-|HAT-P-|XO-|HIP |TrES-|BD[+-]\d{1,2} )\d{1,6}|PSR .+)").fullmatch, dummy_preprocess],
-    ["ID", [50, 54], "left", re.compile("([A-Za-z]{0,3}\d{0,4}|_)").fullmatch, dummy_preprocess],
-    ["ID/Diacritics", [56, 60], "left", re.compile("(V\d+|[α-ωb-zAY]{0,3}\d{0,4}|_)").fullmatch, lowercase_preprocess],
-    ["Con", [62, 64], "left", re.compile("(_|[A-Z][A-Za-z]{2})").fullmatch, dummy_preprocess],
-    ["#", [66, 69], "left", re.compile("(_|A|Aa|Aa1|C|Ca|B)").fullmatch, empty_to_underscore_preprocess],
-    ["WDS_J", [71, 80], "left", re.compile("(_|(\d{5}[-+]\d{4}))").fullmatch, dummy_preprocess],
+    ["Name/ASCII", [1, 17], "left", re.compile(r"[A-Z][a-z']+( [A-Z][a-z]+)?").fullmatch, dummy_preprocess],
+    ["Name/Diacritics", [19, 35], "left", re.compile(r".*").fullmatch, dummy_preprocess],
+    ["Designation", [37, 48], "left", re.compile(r"((HR |HD |GJ |WASP-|HAT-P-|XO-|HIP |TrES-|BD[+-]\d{1,2} )\d{1,6}|PSR .+)").fullmatch, dummy_preprocess],
+    ["ID", [50, 54], "left", re.compile(r"([A-Za-z]{0,3}\d{0,4}|_)").fullmatch, dummy_preprocess],
+    ["ID/Diacritics", [56, 60], "left", re.compile(r"(V\d+|[α-ωb-zAY]{0,3}\d{0,4}|_)").fullmatch, lowercase_preprocess],
+    ["Con", [62, 64], "left", re.compile(r"(_|[A-Z][A-Za-z]{2})").fullmatch, dummy_preprocess],
+    ["#", [66, 69], "left", re.compile(r"(_|A|Aa|Aa1|C|Ca|B)").fullmatch, empty_to_underscore_preprocess],
+    ["WDS_J", [71, 80], "left", re.compile(r"(_|(\d{5}[-+]\d{4}))").fullmatch, dummy_preprocess],
     ["mag", [82, 86], "right", lambda x: x == "_" or (float(x) > -2 and float(x) < 13), dummy_preprocess],
-    ["bnd", [88, 89], "right", re.compile("[GV_]").fullmatch, dummy_preprocess],
-    ["HIP", [91, 96], "right", re.compile("(\d{1,6}|_)").fullmatch, dummy_preprocess],
-    ["HD", [98, 103], "right", re.compile("(\d{1,6}|_)").fullmatch, dummy_preprocess],
+    ["bnd", [88, 89], "right", re.compile(r"[GV_]").fullmatch, dummy_preprocess],
+    ["HIP", [91, 96], "right", re.compile(r"(\d{1,6}|_)").fullmatch, dummy_preprocess],
+    ["HD", [98, 103], "right", re.compile(r"(\d{1,6}|_)").fullmatch, dummy_preprocess],
     ["RA(J2000)", [105, 114], "right", lambda x: float(x) >= 0 and float(x) <= 360, dummy_preprocess],
     ["Dec(J2000)", [116, 125], "right", lambda x: float(x) >= -90 and float(x) <= 90, dummy_preprocess],
-    ["Date", [127, 136], "right", re.compile("20[12]\d-(1[0-2]|0[1-9])-(3[01]|[12]\d|0[1-9])").fullmatch, dummy_preprocess],
-    ["notes", [138, 138], "right", re.compile("[*@]?").fullmatch, dummy_preprocess],
+    ["Date", [127, 136], "right", re.compile(r"20[12]\d-(1[0-2]|0[1-9])-(3[01]|[12]\d|0[1-9])").fullmatch, dummy_preprocess],
+    ["notes", [138, 138], "right", re.compile(r"[*@]?").fullmatch, dummy_preprocess],
 ]
 # fmt:on
 

@@ -51,6 +51,11 @@ For a more comprehensive list of star catalog prefixes, see [Wikipedia's list](h
 
 The IAU_CSN.txt data file in this repository was last synced with the IAU on 2022-07-04. The IAU_CSN_normalized.txt file is intended to make machine parsing easier. Ideally, this should be the same as the original file, but there have been instances where the original file contained alignment errors.
 
+### 2025-04-24
+
+- No changes to the original file. Website seems to be down.
+- Fixed minor typo in regexes.
+
 ### 2024-07-01
 
 - No changes to the original file
